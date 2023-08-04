@@ -1,0 +1,36 @@
+---
+layout: page
+---
+
+<p>You will work on the assignments for CS102 on the <code>cs102</code> machine, which you access remotely.
+      You'll initially make a copy of the starter project to modify, use command-line tools to edit and debug your code,
+      and use some 102-specific tools like <code>codecheck</code> and <code>sanitycheck</code> to test your work.</p>
+
+<div class="announcement-box">
+      <h3>奖学金计划</h3>
+      <p>作业 0~5 总分共 80 分，凡最终得分 ≥65 的同学，奖励 ￥500 元。</p>
+</div>
+
+<ul id="archive">
+      {% for asg in site.assignments %}
+      <li class="archiveposturl" style="background: transparent">
+            <span><a href="{{ asg.url | prepend: site.baseurl}}">{{ asg.title }}</a></span>
+            <strong style="font-size:100%; font-family: 'Titillium Web', sans-serif; float:right">
+                  <a title="查看作业手册" href="
+                  {% if link.url contains '://' %}
+                        {{ asg.pdf }}
+                  {% else %}
+                        {{ asg.pdf | prepend: site.baseurl }}
+                  {% endif %}
+                  " target="_blank"><i class="fas fa-file-pdf"></i></a>
+                  {% if asg.attachment %}
+                  <a title="下载作业附件" href="{{ asg.attachment | prepend: site.baseurl }}"><i
+                              class="fas fa-file-archive"></i></a>
+                  {% endif %}
+            </strong>
+      </li>
+      <div class="asg-content" style="padding: .2em 0em .1em .5em;">{{ asg.tldr }}</div>
+      {% endfor %}
+</ul>
+
+{{ content }}

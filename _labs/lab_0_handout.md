@@ -1,0 +1,19 @@
+---
+type: lab
+date: 2023-8-24T7:30:00+00:00
+title: '实验 0. Remote Development On Linux'
+tldr: "本次实验将带大家练习远程开发的流程。完成本次实验，你将能够连接上课程的远程服务器，并使用终端命令搭配 VS Code/Vim/Emacs 进行远程开发。"
+pdf: https://h8pqt7tpdf.feishu.cn/file/boxcnSbmWGJweGTbE5XxbPJYiwh
+hide_from_announcments: true
+attachment: /static_files/starter-proj.zip
+---
+
+本课程开发环境选用远程 Linux 云端服务器和命令行工具，搭配本地终端和 VS Code 即可完成所有练习。
+
+本次实验将带大家练习远程开发的流程，实验结束后，你应该能够连接上课程的远程服务器，并能够使用终端命令，搭配 VS Code/Vim/Emacs 进行代码编辑。
+
+> **FAQ** 为什么使用远程服务器进行开发？
+>
+> 如果回到上个世纪 80 年代，即使电脑就在你的面前，你也必须使用终端才能对计算机进行操作。现如今，随着个人计算机的发展，虽然图形界面早已成熟，但在真实的开发场景中，使用终端开发仍然占据主导地位。大量的前后端框架、开源项目、开发工具，也严重依赖终端操作。
+>
+> 本课程尽量还原类似的真实开发场景。当你以后有机会去软件公司实习时，你会发现，在这里掌握的技能，将会给你带来极大的回报。

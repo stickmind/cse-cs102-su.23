@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <h1>{{ site.course_name }}<span style="font-size: 20px;color: #0006;">，{{ site.course_semester }} </span></h1>
+
+    {% include announcements.html %}
+    <br />
+
+    <h2>课程介绍</h2>
+    <p>{{ site.course_description }}</p>
+
+    {{ content }}
+
+    <div>
+        <div>
+            <div class="profile-pic-gallary ">
+                <h2>授课讲师</h2>
+                {% for ins in site.data.people.instructors %}
+                <div class="image--cover-container">
+                    <img src="{{ins.profile_pic}}" class="image--cover">
+                    {% if ins.webpage %}
+                    <p><a href="{{ ins.webpage }}" target="_blank">{{ins.name}}</a></p>
+                    {% else %}
+                    <p>{{ins.name}}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

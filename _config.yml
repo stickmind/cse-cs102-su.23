@@ -1,0 +1,63 @@
+# Site settings
+course_name: CSE/CS102：计算机组成与系统
+course_description: ""
+course_semester: "Spring 2023"
+
+baseurl: ""
+url: "http://stickmind.github.io"
+
+schoolname: "StickMind"
+schoolurl: "https://www.stickmind.com"
+courseurl: "https://cs101.stickmind.com"
+#github_username: stickmind
+
+address: |
+    本系列课程由 StickMind 监制
+    由洋和朋友们的计算咨询（武汉）有限公司提供销售
+
+# Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
+# google_analytics: UA-XXXXXXXX-X
+
+### Do not change the followings unless you know what you are doing ###
+
+# Build settings
+markdown: kramdown
+
+# Other options
+permalink: blog/:year/:month/:title
+excerpt_separator: "<!--more-->"
+
+include: ['_images', '_css']
+exclude: ['develop']
+
+timezone: Asia/Shanghai
+dateformat: "%Y/%m/%d"
+
+future: true
+collections:
+    events:
+        output: true
+    lectures:
+        output: true
+    labs:
+        output: true
+    assignments:
+        output: true
+    announcements:
+        output: false
+    materials:
+        output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "assignments"
+    values:
+      layout: "assignment"
+  - scope:
+      path: ""
+      type: "labs"
+    values:
+      layout: "lab"
+
+livereload: true
