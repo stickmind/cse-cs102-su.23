@@ -31,3 +31,5 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 gem "webrick"
 
 gem "kramdown-parser-gfm"
+
+gem "faraday-retry", "~> 2.2"

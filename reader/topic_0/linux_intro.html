@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN" class="sidebar-visible no-js light">
+<html lang="zh-CN" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Linux 介绍 - 《计算机组成：原理与实践》</title>
+        <title>Linux 介绍 - 计算机组成与系统</title>
 
 
         <!-- Custom HTML head -->
@@ -37,7 +37,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -63,7 +63,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html" class="active"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="../topic_0/lab_section_2.html"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html" class="active"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">1.1.</strong> Linux 命令行</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="../topic_0/lab_section_2.html"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,7 +135,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">《计算机组成：原理与实践》</h1>
+                    <h1 class="menu-title">计算机组成与系统</h1>
 
                     <div class="right-buttons">
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
@@ -168,7 +168,12 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="linux-介绍"><a class="header" href="#linux-介绍">Linux 介绍</a></h1>
-<p>本章通过一些基本概念介绍 Linux 的开发环境。首先，我们会讨论 Linux 基金会；然后，介绍一些流行的 Linux 发行版。最终目的是希望大家能够选择一款合适的发行版，作为日常开发的必备工具。让我们开始吧！</p>
+<p>本章通过一些基本概念介绍 Linux 的开发环境。首先，我们会讨论 Linux 基金会；然后，介绍一些流行的 Linux 发行版。最终目的是希望大家能够选择一款合适的发行版，作为日常开发的必备工具。</p>
+<h2 id="linux-历史"><a class="header" href="#linux-历史">Linux 历史</a></h2>
+<p>Linux 是一种开源计算机操作系统，最初是在基于英特尔 x86 的个人计算机上开发的。随后，它被移植到了一系列其他硬件平台上，从小型嵌入式设备到世界上最大的超级计算机。</p>
+<p>1991 年，Linus Torvalds 还是芬兰赫尔辛基的一名学生。当时他开始了一个项目：编写自己的操作系统<strong>内核</strong>。他还收集并开发了以内核为中心的整个操作系统所需的其他基本组件。没过多久，该项目就被命名为 Linux 内核，并最终发展成为对当今世界产生巨大影响的项目。</p>
+<p>1992 年，Linux 通过 <strong>GNU</strong>（自由软件基金会 FSF 的一个项目，推广免费软件）使用 <strong>GPL</strong> 许可，这使它能够建立一个全球开发者社区。通过将内核与 GNU 项目中的其他系统组件相结合，许多其他开发人员创建了名为 <strong>Linux 分发版</strong>的完整系统，该系统首次出现在 90 年代中期。</p>
+<p>90 年代中期创建的 Linux 发行版完全免费，为计算提供了基础，并成为开源软件运动的推动力。1998 年，IBM 和 Oracle 等大公司宣布支持 Linux 平台，并开始了一系列重大的开发工作。</p>
 <h2 id="linux-基金会"><a class="header" href="#linux-基金会">Linux 基金会</a></h2>
 <p>Linux 基金会（LF）是一个非营利性技术联盟，负责托管和促进开源软件项目的协作开发。除了提供一个可以保护和加速 Linux 内核开发的中立组织之外，LF 还致力于围绕开源项目构建一个可持续的生态系统，以加速技术开发和商业应用。</p>
 <p>Linux 基金会项目对世界基础设施至关重要，包括 Linux、Kubernetes、Node.js、ONAP、PyTorch、RISC-V、SPDX、OpenChain 等。Linux 基金会专注于利用最佳实践，满足贡献者、用户和解决方案提供商的需求，为开放协作创建可持续的模型。</p>
@@ -183,6 +188,37 @@
 <p><img src="linux-kernel-distribution-families.png" alt="linux distribution" /></p>
 <p><em>参见：<a href="https://lwn.net/Distributions/">The LWN.net Linux Distribution List</a></em></p>
 <p>Linux 基金会发布的软件都会保持发行版兼容性，这意味着这些软件几乎可以在所有的现代发行版中无差别运行。不同发行版之间可能仅仅是包管理器、软件版本、文件位置之间有些许差异。掌握任何一个发行版的使用后，都可以很快地迁移到另一个。</p>
+<h2 id="red-hat-系统家族"><a class="header" href="#red-hat-系统家族">Red Hat 系统家族</a></h2>
+<p>Red Hat Enterprise Linux（RHEL）家族包括 Fedora，Rocky Linux 和 Oracle Linux 在内的系列产品。</p>
+<p>Fedora 与 RHEL 有着密切的关系，并且包含的软件比 Red Hat 的企业版多得多。其中一个原因是，一个多元化的社区参与了 Fedora 的构建，其中许多贡献者并不为 Red Hat 工作。此外，它还被用作未来 RHEL 版本的测试平台。</p>
+<p>由于 CentOS 8 在 2021 年之后不再更新，Rocky Linux 挑起了大梁，目的是提供一个由社区驱动的企业版 RHEL。</p>
+<p>关于 Red Hat 家族的一些信息：</p>
+<ul>
+<li>Fedora 是 RHEL 的上游测试平台</li>
+<li>Rocky Linux 是 RHEL 的克隆</li>
+<li>支持多个硬件平台</li>
+<li>使用基于 RPM 的 dnf 包管理器来安装、更新和删除系统中的包</li>
+<li>RHEL 在企业中有着广泛的使用。</li>
+</ul>
+<h2 id="suse-系统家族"><a class="header" href="#suse-系统家族">SUSE 系统家族</a></h2>
+<p>SUSE Linux Enterprise Server (SLES)/openSUSE 的关系和 RHTL/Fedora 很相似。</p>
+<p>关于 SUSE 家族的一些信息：</p>
+<ul>
+<li>SLES 是 openSUSE 的上游</li>
+<li>使用基于 RPM 的 zypper 包管理器来安装、更新和删除包</li>
+<li>包括用于系统管理目的的 YaST 应用程序。</li>
+<li>SLES 广泛应用于零售业等其他行业</li>
+</ul>
+<h2 id="debian-系统家族"><a class="header" href="#debian-系统家族">Debian 系统家族</a></h2>
+<p>Debian 发行版是 Ubuntu 和 Linux Mint 等其他几个发行版的上游，通常用于服务器和台式计算机。Debian 是一个纯粹的开源社区项目（不属于任何公司），并且非常注重稳定性。</p>
+<p>Debian 为所有 Linux 发行版的用户提供了迄今为止最大、最完整的软件仓库。Ubuntu 旨在提供长期稳定性和易用性之间的良好折衷。由于 Ubuntu 的大部分软件包都来自 Debian 的稳定分支，继承了 Debian 的超大软件仓库。本课程将基于 Ubuntu 22.04 LTS 发行版进行学习。</p>
+<p>关于 Debian 家族的一些信息：</p>
+<ul>
+<li>Debian 家族是 Ubuntu 的上游，Ubuntu 是 Linux Mint 和其他版本的上游</li>
+<li>使用基于 DPKG 的 APT 包管理器来安装、更新和删除包</li>
+<li>Ubuntu 已被广泛用于云部署</li>
+<li>虽然 Ubuntu 是在 Debian 之上构建的，并且是基于 GNOME 的，但它在视觉上与标准 Debian 以及其他发行版上的界面不同</li>
+</ul>
 
                     </main>
 
@@ -192,7 +228,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../topic_0/lab.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../topic_0/linux_command.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -206,7 +242,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../topic_0/lab.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../topic_0/linux_command.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

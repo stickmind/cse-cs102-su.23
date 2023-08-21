@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN" class="sidebar-visible no-js light">
+<html lang="zh-CN" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>《计算机组成：原理与实践》</title>
+        <title>计算机组成与系统</title>
         <meta name="robots" content="noindex" />
 
 
@@ -38,7 +38,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -64,7 +64,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境</li><li class="chapter-item expanded "><a href="topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li class="chapter-item expanded "><a href="topic_0/lab.html"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="topic_0/lab_section_2.html"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topic_0/linux_command.html"><strong aria-hidden="true">1.1.</strong> Linux 命令行</a></li></ol></li><li class="chapter-item expanded "><a href="topic_0/lab.html"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="topic_0/lab_section_2.html"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -136,7 +136,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">《计算机组成：原理与实践》</h1>
+                    <h1 class="menu-title">计算机组成与系统</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -169,8 +169,20 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="前言"><a class="header" href="#前言">前言</a></h1>
-<p>本书是《<a href="https://cs102.stickmind.com/">CS102：计算机组成与系统</a>》课程伴侣，章节规划大致和课程计划同步。本书大部分内容取材自《深入理解计算机系统》和《C 程序设计语言》两本教材，如有雷同，纯属故意。技术类书籍在没有掌握的情况下阅读，往往效率低下。通过课程、讲义或手册的形式，将一些核心的概念打磨清楚后再去看书，不仅可以节省大量宝贵的时间，还能真正领会字里行间的深意。所以，本书也可以作为上述两本教材的上手指南。</p>
-<p>前置课程在编程方法与抽象思维上，为你提供了扎实的基础。本课程将在此基础上继续提升你的编程技术，在广度和深度上拓展你的编程经验。课程将从 C 语言开始，逐步深入到底层汇编语言，一步步带你梳理计算机底层的逻辑。当完全理解计算机如何执行程序并操作数据时，你将会成为一名更高效的程序员，特别是在处理调试问题、性能优化、内存管理以及程序健壮性方面。</p>
+<p>计算机科学教学的前两年，重点是训练你的编程方法和抽象思维能力。在斯坦福大学成功的教学经验中，这两个任务分别由 CS106A 和 CS106B 两门课完成。在 StickMind 课程规划中，这两个任务由 CS101 课程完成，选用 C++ 编程语言。未来也可能会推出现代 C 语言版本的 CS101，敬请期待。</p>
+<p>编程方法学的重点是将程序<strong>写对</strong>，能够利用逐步求精等基本策略，将稍大一些的程序进行分解。这类课程一般会设置一些小游戏或者文本处理，只要求程序能够正确运行即可。抽象思维的重点则是将程序<strong>写好</strong>，利用一些经典的数据结构和算法，你可以解决一些更为复杂的问题。这类课程不仅要求你把程序写对，更要求你能够高效地解决问题。</p>
+<p>经过这些前置课程的训练，你基本能够掌握以下一些能力：</p>
+<ul>
+<li>了解 Python/C++/Java 基本语法</li>
+<li>会用递归思维解决问题</li>
+<li>理解数据抽象并能够实现经典的抽象数据类型（链表、栈、堆、集合、映射）</li>
+<li>理解并能够实现经典算法（搜索、排序、回溯、哈希）</li>
+</ul>
+<p>作为一名程序员，你也应该具备良好的软件工程能力，能够编写组织良好、可读性强的代码。</p>
+<p>本课程在计算机科学教学中充当了承上启下的作用。这类课程一般以“计算机组成原理”或“计算机系统基础”冠名。前者偏重硬件，会涉及到 CPU 的内部细节，甚至会要求你设计一个 CPU 模拟器；而后者则偏重软件，以软件开发者的视角抽象看待硬件，不会在硬件层面花费太多精力。本课程倾向于后者，继续提升你的编程技术，在广度和深度上拓展你的编程经验。</p>
+<p>本课程将从 C 语言开始，逐步深入到底层汇编语言，一步步带你梳理计算机的运行机制。当完全理解计算机如何执行程序并操作数据时，你将会成为一名更高效的程序员，特别是在处理调试问题、性能优化、内存管理以及程序健壮性方面。只有理解程序是如何运行的，你才能更好地理解 Python/C++/Java 这些高级语言的底层执行逻辑，才能更快地学习其他编程语言进行开发。</p>
+<p>本文档是《<a href="https://cs102.stickmind.com/">CS102：计算机组成与系统</a>》课程伴侣，章节规划大致和课程计划同步。大部分内容取材自《深入理解计算机系统》和《C 程序设计语言》两本教材，如有雷同，纯属故意。技术类书籍在没有掌握的情况下阅读，往往效率低下。通过课程、讲义或手册的形式，将一些核心的概念打磨清楚后再去看书，不仅可以节省大量宝贵的时间，还能真正领会字里行间的深意。所以，本书也可以作为上述两本教材的上手指南。</p>
+<h2 id="目标"><a class="header" href="#目标">目标</a></h2>
 <p>本课程的目标是让学生<strong>掌握</strong></p>
 <ul>
 <li>以复杂的内存和指针方式编写 C 程序</li>
@@ -184,10 +196,15 @@
 <li>在 Linux 环境中开发程序</li>
 </ul>
 <p>贯穿整个课程，最终会带你揭开计算机基础架构的奥秘。</p>
-<h2 id="试听课程"><a class="header" href="#试听课程">试听课程</a></h2>
-<p><a href="https://www.cctalk.com/m/group/90917111">CS102：计算机组成与系统（试听版）</a>包含前 4 个话题的所有录播视频。试听版仅提供录播内容，不提供任何答疑、作业、批改等服务。试听平台限制课程人数为 500 人，象征性收取 1 元，保留更多名额给有需要的同学。</p>
+<h2 id="试听"><a class="header" href="#试听">试听</a></h2>
+<p><a href="https://www.cctalk.com/m/group/90917111">CS102：计算机组成与系统（试听版）</a>包含前 4 个话题的录播剪辑。试听版仅提供录播内容，不提供任何答疑、作业、批改等服务。试听平台限制课程人数为 500 人，象征性收取 1 元，保留更多名额给有需要的同学。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux-介绍"><a class="header" href="#linux-介绍">Linux 介绍</a></h1>
-<p>本章通过一些基本概念介绍 Linux 的开发环境。首先，我们会讨论 Linux 基金会；然后，介绍一些流行的 Linux 发行版。最终目的是希望大家能够选择一款合适的发行版，作为日常开发的必备工具。让我们开始吧！</p>
+<p>本章通过一些基本概念介绍 Linux 的开发环境。首先，我们会讨论 Linux 基金会；然后，介绍一些流行的 Linux 发行版。最终目的是希望大家能够选择一款合适的发行版，作为日常开发的必备工具。</p>
+<h2 id="linux-历史"><a class="header" href="#linux-历史">Linux 历史</a></h2>
+<p>Linux 是一种开源计算机操作系统，最初是在基于英特尔 x86 的个人计算机上开发的。随后，它被移植到了一系列其他硬件平台上，从小型嵌入式设备到世界上最大的超级计算机。</p>
+<p>1991 年，Linus Torvalds 还是芬兰赫尔辛基的一名学生。当时他开始了一个项目：编写自己的操作系统<strong>内核</strong>。他还收集并开发了以内核为中心的整个操作系统所需的其他基本组件。没过多久，该项目就被命名为 Linux 内核，并最终发展成为对当今世界产生巨大影响的项目。</p>
+<p>1992 年，Linux 通过 <strong>GNU</strong>（自由软件基金会 FSF 的一个项目，推广免费软件）使用 <strong>GPL</strong> 许可，这使它能够建立一个全球开发者社区。通过将内核与 GNU 项目中的其他系统组件相结合，许多其他开发人员创建了名为 <strong>Linux 分发版</strong>的完整系统，该系统首次出现在 90 年代中期。</p>
+<p>90 年代中期创建的 Linux 发行版完全免费，为计算提供了基础，并成为开源软件运动的推动力。1998 年，IBM 和 Oracle 等大公司宣布支持 Linux 平台，并开始了一系列重大的开发工作。</p>
 <h2 id="linux-基金会"><a class="header" href="#linux-基金会">Linux 基金会</a></h2>
 <p>Linux 基金会（LF）是一个非营利性技术联盟，负责托管和促进开源软件项目的协作开发。除了提供一个可以保护和加速 Linux 内核开发的中立组织之外，LF 还致力于围绕开源项目构建一个可持续的生态系统，以加速技术开发和商业应用。</p>
 <p>Linux 基金会项目对世界基础设施至关重要，包括 Linux、Kubernetes、Node.js、ONAP、PyTorch、RISC-V、SPDX、OpenChain 等。Linux 基金会专注于利用最佳实践，满足贡献者、用户和解决方案提供商的需求，为开放协作创建可持续的模型。</p>
@@ -202,6 +219,47 @@
 <p><img src="topic_0/linux-kernel-distribution-families.png" alt="linux distribution" /></p>
 <p><em>参见：<a href="https://lwn.net/Distributions/">The LWN.net Linux Distribution List</a></em></p>
 <p>Linux 基金会发布的软件都会保持发行版兼容性，这意味着这些软件几乎可以在所有的现代发行版中无差别运行。不同发行版之间可能仅仅是包管理器、软件版本、文件位置之间有些许差异。掌握任何一个发行版的使用后，都可以很快地迁移到另一个。</p>
+<h2 id="red-hat-系统家族"><a class="header" href="#red-hat-系统家族">Red Hat 系统家族</a></h2>
+<p>Red Hat Enterprise Linux（RHEL）家族包括 Fedora，Rocky Linux 和 Oracle Linux 在内的系列产品。</p>
+<p>Fedora 与 RHEL 有着密切的关系，并且包含的软件比 Red Hat 的企业版多得多。其中一个原因是，一个多元化的社区参与了 Fedora 的构建，其中许多贡献者并不为 Red Hat 工作。此外，它还被用作未来 RHEL 版本的测试平台。</p>
+<p>由于 CentOS 8 在 2021 年之后不再更新，Rocky Linux 挑起了大梁，目的是提供一个由社区驱动的企业版 RHEL。</p>
+<p>关于 Red Hat 家族的一些信息：</p>
+<ul>
+<li>Fedora 是 RHEL 的上游测试平台</li>
+<li>Rocky Linux 是 RHEL 的克隆</li>
+<li>支持多个硬件平台</li>
+<li>使用基于 RPM 的 dnf 包管理器来安装、更新和删除系统中的包</li>
+<li>RHEL 在企业中有着广泛的使用。</li>
+</ul>
+<h2 id="suse-系统家族"><a class="header" href="#suse-系统家族">SUSE 系统家族</a></h2>
+<p>SUSE Linux Enterprise Server (SLES)/openSUSE 的关系和 RHTL/Fedora 很相似。</p>
+<p>关于 SUSE 家族的一些信息：</p>
+<ul>
+<li>SLES 是 openSUSE 的上游</li>
+<li>使用基于 RPM 的 zypper 包管理器来安装、更新和删除包</li>
+<li>包括用于系统管理目的的 YaST 应用程序。</li>
+<li>SLES 广泛应用于零售业等其他行业</li>
+</ul>
+<h2 id="debian-系统家族"><a class="header" href="#debian-系统家族">Debian 系统家族</a></h2>
+<p>Debian 发行版是 Ubuntu 和 Linux Mint 等其他几个发行版的上游，通常用于服务器和台式计算机。Debian 是一个纯粹的开源社区项目（不属于任何公司），并且非常注重稳定性。</p>
+<p>Debian 为所有 Linux 发行版的用户提供了迄今为止最大、最完整的软件仓库。Ubuntu 旨在提供长期稳定性和易用性之间的良好折衷。由于 Ubuntu 的大部分软件包都来自 Debian 的稳定分支，继承了 Debian 的超大软件仓库。本课程将基于 Ubuntu 22.04 LTS 发行版进行学习。</p>
+<p>关于 Debian 家族的一些信息：</p>
+<ul>
+<li>Debian 家族是 Ubuntu 的上游，Ubuntu 是 Linux Mint 和其他版本的上游</li>
+<li>使用基于 DPKG 的 APT 包管理器来安装、更新和删除包</li>
+<li>Ubuntu 已被广泛用于云部署</li>
+<li>虽然 Ubuntu 是在 Debian 之上构建的，并且是基于 GNOME 的，但它在视觉上与标准 Debian 以及其他发行版上的界面不同</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linux-命令行"><a class="header" href="#linux-命令行">Linux 命令行</a></h1>
+<p>Linux 发行版通常提供多种不同的图形桌面环境，极大地方便了不同用户的使用习惯，但是 Linux 系统真正强大的确实命令行。本课程建议大家选择一款流行的桌面环境，将更多的精力放在命令行的学习上，而不是放在五花八门的桌面环境定制上。</p>
+<p>从今天开始，通过命令行工具和你的 Linux 系统进行交互，并一直走下去。真正的 Linux 系统管理员也是花费了大量的时间在命令行的工具上，通过文本界面自动化一些任务，解决一些问题。有句话是这么说的，“图形用户界面让简单的事情变得更简单，而命令行界面让困难的任务变得可能”。Linux 系统严重依赖大量的命令行工具，这些工具有以下一些优点：</p>
+<ul>
+<li>没有 GUI 开销，对硬件要求更友好</li>
+<li>几乎所有的任务都能够通过命令行完成</li>
+<li>可以为一些常见的任务定制命令脚本自动完成</li>
+<li>可以在任何地方通过网络连接远程 Linux 服务器</li>
+<li>图形界面在不同的发行版中会有差异，但命令行的使用却是通用的</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="实验-0上手-linux-开发环境"><a class="header" href="#实验-0上手-linux-开发环境">实验 0：上手 Linux 开发环境</a></h1>
 <p>本课程开发环境选用远程 Linux 云端服务器和命令行工具，搭配本地终端和 VS Code 即可完成所有练习。</p>
 <p>本次实验将带大家练习远程开发的流程，实验结束后，你应该能够连接上课程的远程服务器，并能够使用终端命令，搭配 VS Code 进行代码编辑。</p>

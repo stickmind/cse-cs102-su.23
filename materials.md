@@ -16,6 +16,5 @@ permalink: /materials/
 
 ## 推荐阅读
 
-- [斯坦福 CS107 课程手册](https://stanford.edu/~cgregg/cgi-bin/107-reader/){:target="_blank"}
-- [C 语言的科学和艺术](https://book.douban.com/subject/6519270/){:target="_blank"} \| [计算机程序设计基础](https://www.xuetangx.com/course/thu08091001408/12424773){:target="_blank"}
-- [C 程序设计的抽象思维](https://book.douban.com/subject/10754300/){:target="_blank"}（CS101）
+- [C 语言的科学和艺术](https://book.douban.com/subject/6519270/){:target="_blank"}
+- [C 程序设计的抽象思维](https://book.douban.com/subject/10754300/){:target="_blank"}
