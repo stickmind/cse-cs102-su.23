@@ -5,11 +5,14 @@
 # 开发环境 Linux & C
 
 - [Linux 介绍](topic_0/linux_intro.md)
-  - [Linux 命令行](topic_0/linux_command.md)
-- [实验 0：上手 Linux 开发环境](topic_0/lab.md)
-  - [VS Code 远程开发工作流](topic_0/lab_section_1.md)
-  - [VS Code 官方远程插件（仅供了解）](topic_0/lab_section_2.md)
-
+  - [Windows 模拟 Linux 环境](topic_0/linux_on_windows.md)
+  - [Ubuntu 虚拟机安装及配置](topic_0/linux_virtual_box.md)
+- [Linux 命令行](topic_0/linux_command.md)
+  - [基本命令](topic_0/linux_command_pt1.md)
+  - [文件操作](topic_0/linux_command_pt2.md)
+  - [文件搜索](topic_0/linux_command_pt3.md)
+- [从 C++ 到 C](topic_0/from_cxx_to_c.md)
+- [实验 0：使用课程服务器](topic_0/lab.md)
 
 # 数据的表示 Data Representation
 

@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command.html" class="active"><strong aria-hidden="true">1.1.</strong> Linux 命令行</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="../topic_0/lab_section_2.html"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html" class="active"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -168,7 +168,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="linux-命令行"><a class="header" href="#linux-命令行">Linux 命令行</a></h1>
-<p>Linux 发行版通常提供多种不同的图形桌面环境，极大地方便了不同用户的使用习惯，但是 Linux 系统真正强大的确实命令行。本课程建议大家选择一款流行的桌面环境，将更多的精力放在命令行的学习上，而不是放在五花八门的桌面环境定制上。</p>
+<p>Linux 发行版通常提供多种不同的图形桌面环境，极大地方便了不同用户的使用习惯，但是 Linux 系统真正强大的却是命令行。本课程建议大家选择一款流行的桌面环境，将更多的精力放在命令行的学习上，而不是放在五花八门的桌面环境定制上。</p>
 <p>从今天开始，通过命令行工具和你的 Linux 系统进行交互，并一直走下去。真正的 Linux 系统管理员也是花费了大量的时间在命令行的工具上，通过文本界面自动化一些任务，解决一些问题。有句话是这么说的，“图形用户界面让简单的事情变得更简单，而命令行界面让困难的任务变得可能”。Linux 系统严重依赖大量的命令行工具，这些工具有以下一些优点：</p>
 <ul>
 <li>没有 GUI 开销，对硬件要求更友好</li>
@@ -177,16 +177,31 @@
 <li>可以在任何地方通过网络连接远程 Linux 服务器</li>
 <li>图形界面在不同的发行版中会有差异，但命令行的使用却是通用的</li>
 </ul>
+<h2 id="使用文本终端"><a class="header" href="#使用文本终端">使用文本终端</a></h2>
+<p>终端模拟器程序在桌面窗口中模拟独立终端，本质上就像你在没有运行图形界面的纯文本终端上登录机器一样。大多数终端模拟器程序支持打开多个终端会话。Ubuntu 默认使用 <code>gnome-terminal</code> 终端应用程序。</p>
+<p><img src="./assets/terminal.png" alt="terminal" /></p>
+<h2 id="sudo"><a class="header" href="#sudo">sudo</a></h2>
+<p><code>sudo</code> 为用户提供管理（admin）权限，允许用户使用 <code>root</code> 用户的安全权限来运行程序。全新安装的 Ubuntu 系统默认 <code>root</code> 密码是随机的，每次开机都会有一个新的密码。</p>
+<p>如果想把该密码固定，可以打开终端，输入以下命令。重复输入两次密码进行设置（输入过程中，字符不会显示）。</p>
+<pre><code>sudo passwd
+</code></pre>
+<p>此时我们可以通过以下命令切换到 <code>root</code> 用户。注意，在 <code>root</code> 用户下所有操作都是允许的，切记不要误改文件，否则无法恢复。</p>
+<pre><code>su root
+</code></pre>
+<pre><code>cs@stickmind:~$ su root
+Password: 
+root@stickmind:/home/cs# 
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../topic_0/linux_intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../topic_0/linux_virtual_box.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../topic_0/lab.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../topic_0/linux_command_pt1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -196,11 +211,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../topic_0/linux_intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../topic_0/linux_virtual_box.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../topic_0/lab.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../topic_0/linux_command_pt1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

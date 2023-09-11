@@ -1,5 +1,11 @@
 # Linux 介绍
 
+>**本节参考录播**：
+>
+>**开发环境 Linux & C**/
+>1. Windows 模拟 Linux 环境-V230911.mp4
+>2. Ubuntu 虚拟机安装及配置-V230912.mp4
+
 本章通过一些基本概念介绍 Linux 的开发环境。首先，我们会讨论 Linux 基金会；然后，介绍一些流行的 Linux 发行版。最终目的是希望大家能够选择一款合适的发行版，作为日常开发的必备工具。
 
 ## Linux 历史
@@ -28,7 +34,7 @@ Linux 基金会项目对世界基础设施至关重要，包括 Linux、Kubernet
 - SUSE 系统家族（包含 openSUSE）
 - Debian 系统家族（包含 Ubuntu 和 Linux Mint）
 
-![linux distribution](linux-kernel-distribution-families.png)
+![linux distribution](./assets/linux-kernel-distribution-families.png)
 
 *参见：[The LWN.net Linux Distribution List](https://lwn.net/Distributions/)*
 

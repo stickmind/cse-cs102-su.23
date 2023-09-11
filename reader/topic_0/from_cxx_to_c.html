@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>更新记录 - 计算机组成与系统</title>
+        <title>从 C++ 到 C - 计算机组成与系统</title>
 
 
         <!-- Custom HTML head -->
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html" class="active">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html" class="active"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,16 +167,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="更新记录"><a class="header" href="#更新记录">更新记录</a></h1>
+                        <h1 id="从-c-到-c"><a class="header" href="#从-c-到-c">从 C++ 到 C</a></h1>
+<p>本节我们会使用 C 语言复习 CS101 中的一些概念，并改写一些 C++ 程序，逐步上手 C 语言的开发。</p>
+<p>相信大家还记得 CS101 库中的两个重要的接口工具 <a href="https://cppdoc.stickmind.com/strlib.html"><code>strlib.h</code></a> 和 <a href="https://cppdoc.stickmind.com/filelib.html"><code>filelib.h</code></a>。这些抽象接口极大地方便了我们编写字符串处理和文件 I/O 相关的程序。所以在本课程的教学方式上，我们依然遵循抽象思维的观念，避免较早地涉及底层的细节。在入门示例中，重点抽象了以下两个类型 <code>string</code> 和 <code>stream</code>，以便在不涉及指针的情况下，就能完成字符串和文件的处理工作。</p>
+<p>希望通过这样的方式，方便大家对比学习，能够将现有的知识迁移到新的语境中。</p>
+<pre><code class="language-c">/*
+ * Type: string
+ * ------------
+ * The type string is identical to the type char *, which is
+ * traditionally used in C programs.  The main point of defining a
+ * new type is to improve program readability.   At the abstraction
+ * levels at which the type string is used, it is usually not
+ * important to take the string apart into its component characters.
+ * Declaring it as a string emphasizes this atomicity.
+ */
+
+typedef char* string;
+
+/*
+ * Type: stream
+ * ------------
+ * Like string, the stream type is used to provide additional
+ * readability and is defined to be equivalent to FILE *
+ * (which is particularly confusing because it violates
+ * standard case conventions).
+ */
+
+typedef FILE* stream;
+</code></pre>
+<p>为了照顾部分编程基础较为薄弱的同学，本次课程也会引入 CMake 并介绍一种较为方便的 VS Code 开发工作流，方便大家课后自行练习、巩固。</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../topic_0/lab.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../topic_0/linux_command_pt3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="../topic_0/lab.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -184,10 +215,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../topic_0/lab.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../topic_0/linux_command_pt3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="../topic_0/lab.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>更新记录 - 计算机组成与系统</title>
+        <title>文件操作 - 计算机组成与系统</title>
 
 
         <!-- Custom HTML head -->
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html" class="active">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html" class="active"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,16 +167,87 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="更新记录"><a class="header" href="#更新记录">更新记录</a></h1>
+                        <h1 id="文件操作"><a class="header" href="#文件操作">文件操作</a></h1>
+<p>Linux 提供了许多命令用于查看文件的内容、创建新文件或空文件、更改文件的时间戳以及移动、删除和重命名文件或目录。这些命令可以用于管理数据和文件，并确保在正确的位置提供正确的数据。在本节中，我们将学习如何管理文件。</p>
+<h2 id="查看文件"><a class="header" href="#查看文件">查看文件</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><strong><code>cat</code></strong></td><td>用于查看不太长的文件，不提供页面操作</td></tr>
+<tr><td><strong><code>tac</code></strong></td><td>逆序打印文件内容</td></tr>
+<tr><td><strong><code>less</code></strong></td><td>用于查看较大的文件，提供页面操作，操作逻辑类似 <code>vi</code> 编辑器</td></tr>
+<tr><td><strong><code>tail</code></strong></td><td>默认打印文件后 10 行内容，通过参数 <strong><code>-n 15</code></strong> 或 <strong><code>-15</code></strong> 可以改变显示的行数</td></tr>
+<tr><td><strong><code>head</code></strong></td><td>和 <strong><code>tail</code></strong> 命令相反，默认打印文件前 10 行内容</td></tr>
+</tbody></table>
+</div>
+<p><em><strong>补充</strong>：<code>vi</code> 编辑器使用 <strong><code>j</code></strong> 向下滚动，<strong><code>k</code></strong> 向上滚动，使用 <strong><code>/</code></strong> 向后查找，使用 <strong><code>?</code></strong> 向前查找。</em></p>
+<h2 id="文件的创建"><a class="header" href="#文件的创建">文件的创建</a></h2>
+<p><code>touch</code> 命令常用于更新文件的状态，默认修改文件时间戳为当前时间。不过，我们也可以使用该命令创建一个空白文件：</p>
+<pre><code>touch myfile
+</code></pre>
+<p>更多功能可以查询帮助，比如使用 <code>-t</code> 可以设定具体的时间戳。以下命令将文件时间设置为 8 月 12 日 14 点整：</p>
+<pre><code>touch -t 08121400 myfile
+</code></pre>
+<p><img src="./assets/touch.png" alt="touch" /></p>
+<h2 id="文件移动重命名等"><a class="header" href="#文件移动重命名等">文件移动、重命名等</a></h2>
+<p><code>mv</code> 命令可以实现两个功能：</p>
+<ul>
+<li>重命名文件或文件夹</li>
+<li>移动文件到另一个目录</li>
+</ul>
+<p>如果不确定删除哪些文件，可以是用 <code>-i</code> 交互操作。</p>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><strong><code>mv</code></strong></td><td>重命名文件</td></tr>
+<tr><td><strong><code>rm</code></strong></td><td>删除文件</td></tr>
+<tr><td><strong><code>rm –f</code></strong></td><td>强制删除文件</td></tr>
+<tr><td><strong><code>rm –i</code></strong></td><td>交互删除文件</td></tr>
+</tbody></table>
+</div>
+<h2 id="文件夹创建和删除"><a class="header" href="#文件夹创建和删除">文件夹创建和删除</a></h2>
+<p><code>mkdir</code> 命令用于创建目录文件夹，例如，在当前目录创建文件夹可以使用</p>
+<pre><code>mkdir myfolder
+</code></pre>
+<p>在指定目录创建文件夹可以使用</p>
+<pre><code>mkdir ~/Desktop/myfolder
+</code></pre>
+<p>删除文件夹可以使用 <code>rmdir</code> 命令，默认只能删除空文件夹。使用命令 <code>rm -rf</code> 可以快速简单地递归删除整个文件夹。</p>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><strong><code>mv</code></strong></td><td>重命名文件夹</td></tr>
+<tr><td><strong><code>rmdir</code></strong></td><td>删除空白文件夹</td></tr>
+<tr><td><strong><code>rm -rf</code></strong></td><td>强制删除文件夹</td></tr>
+</tbody></table>
+</div>
+<h2 id="修改命令行提示符"><a class="header" href="#修改命令行提示符">修改命令行提示符</a></h2>
+<p>命令行工具通过变量 <code>PS1</code> 存储命令行的文本字符串，一般 Linux 发行版会默认设置一个值，例如：</p>
+<pre><code>cs@stickmind:~$ 
+</code></pre>
+<p>通过修改该变量，可以定制显示的内容：</p>
+<pre><code>PS1=&quot;cs102@virtualbox: &quot;
+</code></pre>
+<p>命令提示符将修改为：</p>
+<pre><code>cs102@virtualbox: 
+</code></pre>
+<p><strong>注意</strong>，在终端直接赋值变量名，仅在当前激活的终端有效。重新打开终端，变量内容仍然是默认值。如果我们想永久修改该变量，可以尝试在 <code>.bashrc</code> 中进行设置。</p>
+<h2 id="练习"><a class="header" href="#练习">练习</a></h2>
+<ol>
+<li>使用 <code>touch</code> 创建两个文件 <code>file1</code> 和 <code>file2</code></li>
+<li>使用 <code>ls -l</code> 检查文件状态</li>
+<li>将 <code>file1</code> 重命名为 <code>new_file1</code></li>
+<li>将 <code>file2</code> 移动到上级目录</li>
+<li>删除 <code>file2</code> 和 <code>new_file1</code></li>
+<li>创建文件夹 <code>dir1</code></li>
+<li>删除 <code>dir1</code></li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../topic_0/lab.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../topic_0/linux_command_pt1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="../topic_0/linux_command_pt3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -184,10 +255,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../topic_0/lab.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../topic_0/linux_command_pt1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="../topic_0/linux_command_pt3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

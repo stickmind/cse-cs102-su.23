@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>VS Code 官方远程插件（仅供了解） - 计算机组成与系统</title>
+        <title>Ubuntu 虚拟机安装及配置 - 计算机组成与系统</title>
 
 
         <!-- Custom HTML head -->
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">1.1.</strong> Linux 命令行</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="../topic_0/lab_section_2.html" class="active"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html" class="active"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,45 +167,102 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="vs-code-官方远程插件仅供了解"><a class="header" href="#vs-code-官方远程插件仅供了解">VS Code 官方远程插件（仅供了解）</a></h1>
-<blockquote>
-<p><strong>❓FAQ</strong> 为什么本课程不推荐使用 VS Code 官方 Remote 插件？</p>
-<p>如果使用官方 Remote 插件，一旦连接服务器，VS Code 会在 <code>home</code> 目录不断生成 <code>.vscode-server</code> 垃圾文件，严重的时候甚至达到几个 GB 的空间。</p>
-<p>除此之外，官方 Remote 插件内存占用也比较高，每个用户都会消耗几百 MB 的内存资源。</p>
-<p>如此高的资源消耗，即便国内外各大高校自建的校内服务器，也无法承受。</p>
-<p><em>参考：<a href="https://github.com/microsoft/vscode-remote-release/issues/6429">Copies of vscode-server installed on school servers take up excessive storage and RAM</a></em></p>
-</blockquote>
-<p>在插件市场搜索并安装 <strong>Remote - SSH</strong> 插件——可以看出该插件至今仍然是 Preview 状态，尚未稳定。</p>
-<p><img src="remote-ssh.png" alt="Remote - SSH" /></p>
-<p>插件安装完成后，点击设置，输入 “<strong>locally</strong>”，在 Remote 插件配置中，勾选 “<strong>Remote: Download Extensions Locally</strong>”。</p>
-<p><img src="remote-ssh-config.png" alt="Remote - SSH Config" /></p>
-<p>配置完插件后，在工具栏选择 Remote Explorer，点击 SSH 后面的 <strong><code>+</code></strong> 号。在弹出的输入窗口中，输入</p>
-<pre><code>ssh YourName@106.14.165.94
+                        <h1 id="ubuntu-虚拟机安装及配置"><a class="header" href="#ubuntu-虚拟机安装及配置">Ubuntu 虚拟机安装及配置</a></h1>
+<h2 id="本节目标"><a class="header" href="#本节目标">本节目标</a></h2>
+<p>本节带大家使用 VirtualBox 安装一个 Ubuntu 22.04 LTS 桌面系统，并尝试使用 OpenSSH 模拟远程登陆。完成本节内容的学习，你应该能够尝试解决以下问题：</p>
+<ul>
+<li>如何通过 VirtualBox 安装 Ubuntu 虚拟机？</li>
+<li>如何使用 <code>apt</code> 包管理器安装、更新、删除软件包？</li>
+<li>如何修改 Ubuntu 软件源提高下载速度？</li>
+<li>如何使用 MSYS2 的 <code>ssh</code> 工具访问 Ubuntu 虚拟机？</li>
+</ul>
+<h2 id="安装-ubuntu-虚拟机"><a class="header" href="#安装-ubuntu-虚拟机">安装 Ubuntu 虚拟机</a></h2>
+<p><a href="https://www.virtualbox.org/">VirtualBox​​</a> 是 Oracle 提供的一款流行的虚拟化软件，可用于 Linux、mac 和 Windows 系统。由于 Linux 系统相对灵活，软件包依赖维护较差，在不熟悉的情况下，很容易造成系统破坏，无法开机等问题。所以，初学阶段没必要在物理机上安装真实的 Linux 系统，就目前的学习而言，虚拟机提供的功能完全够用。一旦虚拟机出现问题，可以直接删除，重新安装。</p>
+<p>提前下载 VirtualBox 和 Ubuntu 22.04 LTS 镜像：</p>
+<ul>
+<li><a href="https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe">点击下载 VirtualBox</a></li>
+<li><a href="https://mirrors.aliyun.com/ubuntu-releases/22.04/ubuntu-22.04.3-desktop-amd64.iso">点击下载 Ubuntu 22.04 LTS</a></li>
+</ul>
+<p>详细的安装过程，请跟随课堂视频一步步完成安装。</p>
+<h2 id="安装开发工具"><a class="header" href="#安装开发工具">安装开发工具</a></h2>
+<p><code>apt</code> 命令是一个功能强大的命令行工具，它与 Ubuntu 的高级打包工具（APT）配合使用。 <code>apt</code> 中包含的命令提供了安装新软件包、升级现有软件包、更新软件包列表索引、甚至升级整个 Ubuntu 系统的方法。</p>
+<p>尝试安装以下软件：</p>
+<ul>
+<li>
+<p><code>build-essential</code> 包含了常用的 <code>gcc</code> 开发工具</p>
+<pre><code>sudo apt install build-essential
+</code></pre>
+</li>
+<li>
+<p>安装 <code>gdb</code>、<code>valgrind</code> 调试器和内存检测工具</p>
+<pre><code>sudo apt install gdb valgrind
+</code></pre>
+</li>
+<li>
+<p>安装 <code>git</code>，<code>cmake</code> 等常用工具</p>
+<pre><code>sudo apt install git cmake ninja-build
+</code></pre>
+</li>
+</ul>
+<p><strong><em>参考文献</em></strong>：</p>
+<ul>
+<li><a href="https://ubuntu.com/server/docs/package-management">Package management</a></li>
+</ul>
+<h2 id="安装-ssh-工具"><a class="header" href="#安装-ssh-工具">安装 SSH 工具</a></h2>
+<p>OpenSSH 是一个功能强大的工具集，用于远程控制联网计算机以及在联网计算机之间传输数据。OpenSSH 客户端和服务器应用程序的安装非常简单。</p>
+<p>使用以下命令在 Ubuntu 系统上安装 OpenSSH 客户端应用程序：</p>
+<pre><code>sudo apt install openssh-client
+</code></pre>
+<p>使用以下命令在 Ubuntu 系统上安装 OpenSSH 服务器应用程序：</p>
+<pre><code>sudo apt install openssh-server
+</code></pre>
+<p>默认情况下，OpenSSH 服务将会自动启动，也可以使用下述命令手动开启服务：</p>
+<pre><code>sudo systemctl start sshd.service
+</code></pre>
+<p><strong><em>参考文献</em></strong>：</p>
+<ul>
+<li><a href="https://ubuntu.com/server/docs/service-openssh">OpenSSH Server</a></li>
+</ul>
+<h2 id="模拟远程登陆"><a class="header" href="#模拟远程登陆">模拟远程登陆</a></h2>
+<p>这里需要先配置端口转发，详细的配置过程，请跟随课堂视频一步步完成。</p>
+<p><img src="./assets/port-forwarding.png" alt="port forwarding" /></p>
+<p>完成端口转发配置后，我们可以使用终端模拟远程登陆：</p>
+<pre><code>$ ssh cs@localhost -p 2222
+The authenticity of host '[localhost]:2222 ([127.0.0.1]:2222)' can't be established.
+ED25519 key fingerprint is SHA256:gfHLfANKNM4cCAoDEZ/CiZ97ql3lfUA2CVM28H6JssM.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[localhost]:2222' (ED25519) to the list of known hosts.
+cs@localhost's password:
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-26-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Last login: Tue Aug 15 13:56:00 2023 from 10.0.2.2
+</code></pre>
+<h2 id="vs-code-官方远程插件工作流"><a class="header" href="#vs-code-官方远程插件工作流">VS Code 官方远程插件工作流</a></h2>
+<p>前往官网下载安装 <a href="https://code.visualstudio.com/">VS Code</a>，在插件市场搜索并安装 <strong>Remote - SSH</strong> 插件。</p>
+<p><img src="./assets/remote-ssh.png" alt="Remote - SSH" /></p>
+<p>插件安装完成后，在工具栏选择 Remote Explorer 模块，点击 SSH 后面的 <strong><code>+</code></strong> 号。在弹出的输入窗口中，输入 SSH 登陆地址。</p>
+<pre><code>ssh cs@localhost -p 2222
 </code></pre>
 <p>随后会提示选择配置文件保存位置，此处直接“回车”选择默认位置即可。</p>
-<p><img src="remote-ssh-connect.png" alt="Remote - SSH Connect" /></p>
+<p><img src="./assets/remote-ssh-connect.png" alt="Remote - SSH Connect" /></p>
 <p>此时点击 Remote 右侧的刷新按钮，就可以看到服务器 IP。连接该服务器，只需要点击 IP 右侧的箭头，随后输入你的账户密码就可以登录。登录成功后，可以在 VS Code 右下角看到连接状态。</p>
-<p><img src="remote-ssh-ok.png" alt="Remote - SSH OK" /></p>
+<p><img src="./assets/remote-ssh-ok.png" alt="Remote - SSH OK" /></p>
 <p>服务器连接成功后，通过 VS Code 菜单栏 <strong>File</strong> 可以选择 “<strong>Open File/Open Folder</strong>” 编辑你的文件或项目。</p>
-<blockquote>
-<p><strong>⚠️注意</strong></p>
-<p>以上练习完成后，可以使用 <code>ls -a</code> 命令查看 home 目录，此时你会发现一个 <code>.vscode-server</code> 文件夹。</p>
-<p>结束练习后，关闭 VS Code，然后使用 <code>rm -r .vscode-server</code> 命令删除 <code>.vscode-server</code> 文件夹。</p>
-</blockquote>
-<blockquote>
-<p><strong>⚠️注意</strong></p>
-<p>严禁使用 Jetbrains Clion/Fleet 连接服务器！一旦连接，此类开发工具会在服务器上下载超过 2 GB 的 Java 依赖。</p>
-</blockquote>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../topic_0/lab_section_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../topic_0/linux_on_windows.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../misc/contributors.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../topic_0/linux_command.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -215,11 +272,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../topic_0/lab_section_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../topic_0/linux_on_windows.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../misc/contributors.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../topic_0/linux_command.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topic_0/linux_command.html"><strong aria-hidden="true">1.1.</strong> Linux 命令行</a></li></ol></li><li class="chapter-item expanded "><a href="topic_0/lab.html"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="topic_0/lab_section_2.html"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="topic_0/lab.html"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -199,6 +199,14 @@
 <h2 id="试听"><a class="header" href="#试听">试听</a></h2>
 <p><a href="https://www.cctalk.com/m/group/90917111">CS102：计算机组成与系统（试听版）</a>包含前 4 个话题的录播剪辑。试听版仅提供录播内容，不提供任何答疑、作业、批改等服务。试听平台限制课程人数为 500 人，象征性收取 1 元，保留更多名额给有需要的同学。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux-介绍"><a class="header" href="#linux-介绍">Linux 介绍</a></h1>
+<blockquote>
+<p><strong>本节参考录播</strong>：</p>
+<p><strong>开发环境 Linux &amp; C</strong>/</p>
+<ol>
+<li>Windows 模拟 Linux 环境-V230911.mp4</li>
+<li>Ubuntu 虚拟机安装及配置-V230912.mp4</li>
+</ol>
+</blockquote>
 <p>本章通过一些基本概念介绍 Linux 的开发环境。首先，我们会讨论 Linux 基金会；然后，介绍一些流行的 Linux 发行版。最终目的是希望大家能够选择一款合适的发行版，作为日常开发的必备工具。</p>
 <h2 id="linux-历史"><a class="header" href="#linux-历史">Linux 历史</a></h2>
 <p>Linux 是一种开源计算机操作系统，最初是在基于英特尔 x86 的个人计算机上开发的。随后，它被移植到了一系列其他硬件平台上，从小型嵌入式设备到世界上最大的超级计算机。</p>
@@ -216,7 +224,7 @@
 <li>SUSE 系统家族（包含 openSUSE）</li>
 <li>Debian 系统家族（包含 Ubuntu 和 Linux Mint）</li>
 </ul>
-<p><img src="topic_0/linux-kernel-distribution-families.png" alt="linux distribution" /></p>
+<p><img src="topic_0/./assets/linux-kernel-distribution-families.png" alt="linux distribution" /></p>
 <p><em>参见：<a href="https://lwn.net/Distributions/">The LWN.net Linux Distribution List</a></em></p>
 <p>Linux 基金会发布的软件都会保持发行版兼容性，这意味着这些软件几乎可以在所有的现代发行版中无差别运行。不同发行版之间可能仅仅是包管理器、软件版本、文件位置之间有些许差异。掌握任何一个发行版的使用后，都可以很快地迁移到另一个。</p>
 <h2 id="red-hat-系统家族"><a class="header" href="#red-hat-系统家族">Red Hat 系统家族</a></h2>
@@ -250,8 +258,152 @@
 <li>Ubuntu 已被广泛用于云部署</li>
 <li>虽然 Ubuntu 是在 Debian 之上构建的，并且是基于 GNOME 的，但它在视觉上与标准 Debian 以及其他发行版上的界面不同</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="windows-模拟-linux-环境"><a class="header" href="#windows-模拟-linux-环境">Windows 模拟 Linux 环境</a></h1>
+<h2 id="本节目标"><a class="header" href="#本节目标">本节目标</a></h2>
+<p>由于大部分同学使用 Windows 系统，在 Windows 平台体验 Linux 开发工具也是可以的。完成本节内容的学习，你应该能够尝试解决以下问题：</p>
+<ul>
+<li>什么是 MSYS2？如何安装 MSYS2？</li>
+<li>如何使用 <code>pacman</code> 包管理工具更新、安装、删除软件包？</li>
+<li>如何修改 MSYS2 国内源？</li>
+<li>如何使用 MSYS2 编译/运行 C 程序？</li>
+</ul>
+<h2 id="安装-msys2-开发工具"><a class="header" href="#安装-msys2-开发工具">安装 MSYS2 开发工具</a></h2>
+<p><a href="https://www.msys2.org/">MSYS2</a> 提供了一个易于使用的类 Linux 环境来构建、安装和运行本机 Windows 软件。配合 VS Code 等开发工具，可以搭建一个较为轻量的开发环境。对于一些 POSIX 依赖不太严格的测试，比起使用 Linux 虚拟机更为直接、方便。</p>
+<p>安装过程，有以下几点需要注意：</p>
+<ul>
+<li>国内用户建议<strong>断网安装</strong>，避免中途出现更新密钥卡死的问题</li>
+<li>安装完后，国内用户建议<strong>修改国内软件源</strong>，提高下载速度</li>
+<li>后续软件体积较大，建议安装在非 C 盘根目录</li>
+<li>建议使用 MSYS2 UCRT 子系统，和课程保持一致</li>
+<li>优先安装 <code>mingw-w64-ucrt-x86_64-</code> 前缀的软件包</li>
+</ul>
+<p>常用命令总结如下，方便后续使用查询，参考连接：<a href="https://www.msys2.org/docs/package-management/">Package Management</a></p>
+<ul>
+<li>
+<p>更新 MSYS2 组件，修改源后建议更新两次</p>
+<pre><code>pacman -Suy
+</code></pre>
+</li>
+<li>
+<p>安装 <code>openssh</code> 可用于后续连接远程服务器</p>
+<pre><code>pacman -S openssh
+</code></pre>
+</li>
+<li>
+<p>安装 <code>gcc</code>、<code>gdb</code>、<code>pkg-config</code> 等常用开发工具</p>
+<pre><code>pacman -S mingw-w64-ucrt-x86_64-toolchain
+</code></pre>
+</li>
+<li>
+<p>安装 <code>make</code>，<code>cmake</code>，<code>ninja</code> 等构建工具</p>
+<pre><code>pacman -S make mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja
+</code></pre>
+</li>
+</ul>
+<h2 id="编译运行-c-程序"><a class="header" href="#编译运行-c-程序">编译运行 C 程序</a></h2>
+<p>在 MSYS2 当前目录创建一个 <code>hello.c</code> 文件，输入以下代码：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+	printf(&quot;Hello World.\n&quot;);
+	return 0;
+}
+</code></pre>
+<p>使用以下命令编译你的第一个 C 程序：</p>
+<pre><code>gcc hello.c -o hello
+</code></pre>
+<p>运行该程序，需要以 <code>./</code> 开头执行以下命令：</p>
+<pre><code>./hello
+</code></pre>
+<p>前缀 <code>./</code> 表示在当前目录下寻找 <code>hello</code> 程序。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ubuntu-虚拟机安装及配置"><a class="header" href="#ubuntu-虚拟机安装及配置">Ubuntu 虚拟机安装及配置</a></h1>
+<h2 id="本节目标-1"><a class="header" href="#本节目标-1">本节目标</a></h2>
+<p>本节带大家使用 VirtualBox 安装一个 Ubuntu 22.04 LTS 桌面系统，并尝试使用 OpenSSH 模拟远程登陆。完成本节内容的学习，你应该能够尝试解决以下问题：</p>
+<ul>
+<li>如何通过 VirtualBox 安装 Ubuntu 虚拟机？</li>
+<li>如何使用 <code>apt</code> 包管理器安装、更新、删除软件包？</li>
+<li>如何修改 Ubuntu 软件源提高下载速度？</li>
+<li>如何使用 MSYS2 的 <code>ssh</code> 工具访问 Ubuntu 虚拟机？</li>
+</ul>
+<h2 id="安装-ubuntu-虚拟机"><a class="header" href="#安装-ubuntu-虚拟机">安装 Ubuntu 虚拟机</a></h2>
+<p><a href="https://www.virtualbox.org/">VirtualBox​​</a> 是 Oracle 提供的一款流行的虚拟化软件，可用于 Linux、mac 和 Windows 系统。由于 Linux 系统相对灵活，软件包依赖维护较差，在不熟悉的情况下，很容易造成系统破坏，无法开机等问题。所以，初学阶段没必要在物理机上安装真实的 Linux 系统，就目前的学习而言，虚拟机提供的功能完全够用。一旦虚拟机出现问题，可以直接删除，重新安装。</p>
+<p>提前下载 VirtualBox 和 Ubuntu 22.04 LTS 镜像：</p>
+<ul>
+<li><a href="https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe">点击下载 VirtualBox</a></li>
+<li><a href="https://mirrors.aliyun.com/ubuntu-releases/22.04/ubuntu-22.04.3-desktop-amd64.iso">点击下载 Ubuntu 22.04 LTS</a></li>
+</ul>
+<p>详细的安装过程，请跟随课堂视频一步步完成安装。</p>
+<h2 id="安装开发工具"><a class="header" href="#安装开发工具">安装开发工具</a></h2>
+<p><code>apt</code> 命令是一个功能强大的命令行工具，它与 Ubuntu 的高级打包工具（APT）配合使用。 <code>apt</code> 中包含的命令提供了安装新软件包、升级现有软件包、更新软件包列表索引、甚至升级整个 Ubuntu 系统的方法。</p>
+<p>尝试安装以下软件：</p>
+<ul>
+<li>
+<p><code>build-essential</code> 包含了常用的 <code>gcc</code> 开发工具</p>
+<pre><code>sudo apt install build-essential
+</code></pre>
+</li>
+<li>
+<p>安装 <code>gdb</code>、<code>valgrind</code> 调试器和内存检测工具</p>
+<pre><code>sudo apt install gdb valgrind
+</code></pre>
+</li>
+<li>
+<p>安装 <code>git</code>，<code>cmake</code> 等常用工具</p>
+<pre><code>sudo apt install git cmake ninja-build
+</code></pre>
+</li>
+</ul>
+<p><strong><em>参考文献</em></strong>：</p>
+<ul>
+<li><a href="https://ubuntu.com/server/docs/package-management">Package management</a></li>
+</ul>
+<h2 id="安装-ssh-工具"><a class="header" href="#安装-ssh-工具">安装 SSH 工具</a></h2>
+<p>OpenSSH 是一个功能强大的工具集，用于远程控制联网计算机以及在联网计算机之间传输数据。OpenSSH 客户端和服务器应用程序的安装非常简单。</p>
+<p>使用以下命令在 Ubuntu 系统上安装 OpenSSH 客户端应用程序：</p>
+<pre><code>sudo apt install openssh-client
+</code></pre>
+<p>使用以下命令在 Ubuntu 系统上安装 OpenSSH 服务器应用程序：</p>
+<pre><code>sudo apt install openssh-server
+</code></pre>
+<p>默认情况下，OpenSSH 服务将会自动启动，也可以使用下述命令手动开启服务：</p>
+<pre><code>sudo systemctl start sshd.service
+</code></pre>
+<p><strong><em>参考文献</em></strong>：</p>
+<ul>
+<li><a href="https://ubuntu.com/server/docs/service-openssh">OpenSSH Server</a></li>
+</ul>
+<h2 id="模拟远程登陆"><a class="header" href="#模拟远程登陆">模拟远程登陆</a></h2>
+<p>这里需要先配置端口转发，详细的配置过程，请跟随课堂视频一步步完成。</p>
+<p><img src="topic_0/./assets/port-forwarding.png" alt="port forwarding" /></p>
+<p>完成端口转发配置后，我们可以使用终端模拟远程登陆：</p>
+<pre><code>$ ssh cs@localhost -p 2222
+The authenticity of host '[localhost]:2222 ([127.0.0.1]:2222)' can't be established.
+ED25519 key fingerprint is SHA256:gfHLfANKNM4cCAoDEZ/CiZ97ql3lfUA2CVM28H6JssM.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[localhost]:2222' (ED25519) to the list of known hosts.
+cs@localhost's password:
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-26-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Last login: Tue Aug 15 13:56:00 2023 from 10.0.2.2
+</code></pre>
+<h2 id="vs-code-官方远程插件工作流"><a class="header" href="#vs-code-官方远程插件工作流">VS Code 官方远程插件工作流</a></h2>
+<p>前往官网下载安装 <a href="https://code.visualstudio.com/">VS Code</a>，在插件市场搜索并安装 <strong>Remote - SSH</strong> 插件。</p>
+<p><img src="topic_0/./assets/remote-ssh.png" alt="Remote - SSH" /></p>
+<p>插件安装完成后，在工具栏选择 Remote Explorer 模块，点击 SSH 后面的 <strong><code>+</code></strong> 号。在弹出的输入窗口中，输入 SSH 登陆地址。</p>
+<pre><code>ssh cs@localhost -p 2222
+</code></pre>
+<p>随后会提示选择配置文件保存位置，此处直接“回车”选择默认位置即可。</p>
+<p><img src="topic_0/./assets/remote-ssh-connect.png" alt="Remote - SSH Connect" /></p>
+<p>此时点击 Remote 右侧的刷新按钮，就可以看到服务器 IP。连接该服务器，只需要点击 IP 右侧的箭头，随后输入你的账户密码就可以登录。登录成功后，可以在 VS Code 右下角看到连接状态。</p>
+<p><img src="topic_0/./assets/remote-ssh-ok.png" alt="Remote - SSH OK" /></p>
+<p>服务器连接成功后，通过 VS Code 菜单栏 <strong>File</strong> 可以选择 “<strong>Open File/Open Folder</strong>” 编辑你的文件或项目。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux-命令行"><a class="header" href="#linux-命令行">Linux 命令行</a></h1>
-<p>Linux 发行版通常提供多种不同的图形桌面环境，极大地方便了不同用户的使用习惯，但是 Linux 系统真正强大的确实命令行。本课程建议大家选择一款流行的桌面环境，将更多的精力放在命令行的学习上，而不是放在五花八门的桌面环境定制上。</p>
+<p>Linux 发行版通常提供多种不同的图形桌面环境，极大地方便了不同用户的使用习惯，但是 Linux 系统真正强大的却是命令行。本课程建议大家选择一款流行的桌面环境，将更多的精力放在命令行的学习上，而不是放在五花八门的桌面环境定制上。</p>
 <p>从今天开始，通过命令行工具和你的 Linux 系统进行交互，并一直走下去。真正的 Linux 系统管理员也是花费了大量的时间在命令行的工具上，通过文本界面自动化一些任务，解决一些问题。有句话是这么说的，“图形用户界面让简单的事情变得更简单，而命令行界面让困难的任务变得可能”。Linux 系统严重依赖大量的命令行工具，这些工具有以下一些优点：</p>
 <ul>
 <li>没有 GUI 开销，对硬件要求更友好</li>
@@ -260,6 +412,288 @@
 <li>可以在任何地方通过网络连接远程 Linux 服务器</li>
 <li>图形界面在不同的发行版中会有差异，但命令行的使用却是通用的</li>
 </ul>
+<h2 id="使用文本终端"><a class="header" href="#使用文本终端">使用文本终端</a></h2>
+<p>终端模拟器程序在桌面窗口中模拟独立终端，本质上就像你在没有运行图形界面的纯文本终端上登录机器一样。大多数终端模拟器程序支持打开多个终端会话。Ubuntu 默认使用 <code>gnome-terminal</code> 终端应用程序。</p>
+<p><img src="topic_0/./assets/terminal.png" alt="terminal" /></p>
+<h2 id="sudo"><a class="header" href="#sudo">sudo</a></h2>
+<p><code>sudo</code> 为用户提供管理（admin）权限，允许用户使用 <code>root</code> 用户的安全权限来运行程序。全新安装的 Ubuntu 系统默认 <code>root</code> 密码是随机的，每次开机都会有一个新的密码。</p>
+<p>如果想把该密码固定，可以打开终端，输入以下命令。重复输入两次密码进行设置（输入过程中，字符不会显示）。</p>
+<pre><code>sudo passwd
+</code></pre>
+<p>此时我们可以通过以下命令切换到 <code>root</code> 用户。注意，在 <code>root</code> 用户下所有操作都是允许的，切记不要误改文件，否则无法恢复。</p>
+<pre><code>su root
+</code></pre>
+<pre><code>cs@stickmind:~$ su root
+Password: 
+root@stickmind:/home/cs# 
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="基本命令"><a class="header" href="#基本命令">基本命令</a></h1>
+<p>本节讨论如何通过命令行完成一些基本操作。</p>
+<h2 id="登陆退出系统"><a class="header" href="#登陆退出系统">登陆/退出系统</a></h2>
+<p>回顾虚拟机的使用教程，通过命令行，可以使用以下命令登陆系统。SSH 通过服务器地址 <code>172.0.0.1</code> 和端口 <code>2222</code> 访问系统中的 <code>cs</code> 账户：</p>
+<pre><code>ssh cs@172.0.0.1 -p 2222
+</code></pre>
+<p>退出系统可以使用：</p>
+<pre><code>exit
+</code></pre>
+<h2 id="重启关机"><a class="header" href="#重启关机">重启/关机</a></h2>
+<p>使用 <code>shutdown</code> 命令可以关闭 Linux 系统。以下命令表示立刻关闭计算机（不加参数 <code>now</code>，则系统将会在 1 分钟后关机）：</p>
+<pre><code>sudo shutdown now
+</code></pre>
+<p>重启计算机可以使用 <code>reboot</code> 命令。以下命令表示立刻重启计算机：</p>
+<pre><code>sudo reboot
+</code></pre>
+<p><code>reboot</code> 命令等价于 <code>sudo shutdown -r now</code>。其中，参数 <code>now</code> 可以替换成具体时间，比如 <code>sudo shutdown -r +30</code> 表示 30 分钟后重启。</p>
+<h2 id="访问路径"><a class="header" href="#访问路径">访问路径</a></h2>
+<p>登陆系统后，默认的位置是个人账户目录，也可以通过系统变量 <code>$HOME</code> 查看：</p>
+<pre><code>echo $HOME
+</code></pre>
+<p>在 Linux 系统中，该路径也可以使用 <code>~</code> 表示，例如 <code>~/Desktop</code> 表示 <code>/home/cs/Desktop</code>。</p>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><code>pwd</code></td><td>显示当前路径</td></tr>
+<tr><td><code>cd ~</code> 或 <code>cd</code></td><td>切换到个人账户目录</td></tr>
+<tr><td><code>cd ..</code></td><td>切换到上级目录 (<strong><code>..</code></strong>)</td></tr>
+<tr><td><code>cd -</code></td><td>切换到前一步目录 <strong><code>-</code></strong> (减号)</td></tr>
+</tbody></table>
+</div>
+<h2 id="定位程序位置"><a class="header" href="#定位程序位置">定位程序位置</a></h2>
+<p>当我们执行命令时，系统会根据配置好的路径依次在目录中寻找该命令；如果找不到，则会提示 “not found”。可以通过系统变量 <code>PATH</code> 查看修改查找的路径和顺序。</p>
+<pre><code>echo $PATH
+</code></pre>
+<p>根据输出可以看出，路径之间用冒号分隔，查询顺序从左到右依次进行。</p>
+<pre><code>$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+</code></pre>
+<p>在执行 <code>hello</code> 程序时，如果不添加 <code>./</code> 前缀，则系统会提示找不到 <code>hello</code> 命令，其原因就是 <code>PATH</code> 并不包含当前目录。如果我们将 <code>hello</code> 程序放到 <code>~/.local/bin</code> 目录下，则可以通过以下命令，将该路径添加到 <code>PATH</code> 变量中。</p>
+<pre><code>export PATH=$HOME/.local/bin:$PATH
+</code></pre>
+<p>使用 <code>which</code> 命令可以定位程序的位置，该命令会在系统路径中查找程序的位置并输出，例如</p>
+<pre><code>$ which make
+/usr/bin/make
+</code></pre>
+<p>如果不局限系统路径，可以使用 <code>whereis</code> 命令扩大搜索范围。</p>
+<pre><code>$ whereis diff
+diff: /usr/bin/diff /usr/share/man/man1/diff.1.gz
+</code></pre>
+<h2 id="绝对路径-vs-相对路径"><a class="header" href="#绝对路径-vs-相对路径">绝对路径 vs 相对路径</a></h2>
+<p>在 Linux 中定义路径的两种方式：</p>
+<ul>
+<li>
+<p><strong>绝对路径</strong></p>
+<p>绝对路径以根路径 <code>/</code> 开头，依次跟随目录树分支，定位到需要的位置，例如，<code>/usr/bin</code>。</p>
+</li>
+<li>
+<p><strong>相对路径</strong></p>
+<p>相对路径以当前路径开头，<code>.</code> 表示当前目录，<code>..</code> 表示上一级目录，<code>~</code> 表示个人账户目录。</p>
+</li>
+</ul>
+<p>在个人账户目录中，执行以下命令都会切换到 <code>/usr/bin</code> 目录，</p>
+<pre><code>$ pwd
+/home/cs
+$ cd /usr/bin
+</code></pre>
+<pre><code>$ pwd
+/home/cs
+$ cd ../../usr/bin
+</code></pre>
+<h2 id="查看文件系统"><a class="header" href="#查看文件系统">查看文件系统</a></h2>
+<p>使用第三方工具 <code>tree</code> 可以很方便地浏览文件系统内容，通过以下命令进行安装：</p>
+<pre><code>sudo apt install tree
+</code></pre>
+<p>直接使用 <code>tree</code> 命令会递归列出当前路径下所有文件树，通过 <code>-L</code> 指定层级可以指定显示的文件深度：</p>
+<pre><code>$ tree -L 1
+.
+├── Desktop
+├── Documents
+├── Downloads
+├── Music
+├── Pictures
+├── Public
+├── snap
+├── Templates
+└── Videos
+</code></pre>
+<p>其他一些常用命令也可以实现类似目的：</p>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><strong><code>ls</code></strong></td><td>列出当前目录内容</td></tr>
+<tr><td><strong><code>ls –a</code></strong></td><td>列出当前目录内容，包含 <code>.</code> 开头的隐藏文件</td></tr>
+<tr><td><strong><code>ls -l</code></strong></td><td>以列表形式列出当前目录内容</td></tr>
+</tbody></table>
+</div>
+<h2 id="练习"><a class="header" href="#练习">练习</a></h2>
+<ol>
+<li>使用 <code>whereis</code> 命令定位 <code>gcc</code> 程序的位置</li>
+<li>显示当前路径</li>
+<li>切换到 <code>/usr/bin</code> 目录</li>
+<li>切换到个人账户目录</li>
+<li>切换到上一级目录</li>
+<li>使用 <code>-</code> 参数切换到前一步目录</li>
+<li>显示当前路径</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="文件操作"><a class="header" href="#文件操作">文件操作</a></h1>
+<p>Linux 提供了许多命令用于查看文件的内容、创建新文件或空文件、更改文件的时间戳以及移动、删除和重命名文件或目录。这些命令可以用于管理数据和文件，并确保在正确的位置提供正确的数据。在本节中，我们将学习如何管理文件。</p>
+<h2 id="查看文件"><a class="header" href="#查看文件">查看文件</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><strong><code>cat</code></strong></td><td>用于查看不太长的文件，不提供页面操作</td></tr>
+<tr><td><strong><code>tac</code></strong></td><td>逆序打印文件内容</td></tr>
+<tr><td><strong><code>less</code></strong></td><td>用于查看较大的文件，提供页面操作，操作逻辑类似 <code>vi</code> 编辑器</td></tr>
+<tr><td><strong><code>tail</code></strong></td><td>默认打印文件后 10 行内容，通过参数 <strong><code>-n 15</code></strong> 或 <strong><code>-15</code></strong> 可以改变显示的行数</td></tr>
+<tr><td><strong><code>head</code></strong></td><td>和 <strong><code>tail</code></strong> 命令相反，默认打印文件前 10 行内容</td></tr>
+</tbody></table>
+</div>
+<p><em><strong>补充</strong>：<code>vi</code> 编辑器使用 <strong><code>j</code></strong> 向下滚动，<strong><code>k</code></strong> 向上滚动，使用 <strong><code>/</code></strong> 向后查找，使用 <strong><code>?</code></strong> 向前查找。</em></p>
+<h2 id="文件的创建"><a class="header" href="#文件的创建">文件的创建</a></h2>
+<p><code>touch</code> 命令常用于更新文件的状态，默认修改文件时间戳为当前时间。不过，我们也可以使用该命令创建一个空白文件：</p>
+<pre><code>touch myfile
+</code></pre>
+<p>更多功能可以查询帮助，比如使用 <code>-t</code> 可以设定具体的时间戳。以下命令将文件时间设置为 8 月 12 日 14 点整：</p>
+<pre><code>touch -t 08121400 myfile
+</code></pre>
+<p><img src="topic_0/./assets/touch.png" alt="touch" /></p>
+<h2 id="文件移动重命名等"><a class="header" href="#文件移动重命名等">文件移动、重命名等</a></h2>
+<p><code>mv</code> 命令可以实现两个功能：</p>
+<ul>
+<li>重命名文件或文件夹</li>
+<li>移动文件到另一个目录</li>
+</ul>
+<p>如果不确定删除哪些文件，可以是用 <code>-i</code> 交互操作。</p>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><strong><code>mv</code></strong></td><td>重命名文件</td></tr>
+<tr><td><strong><code>rm</code></strong></td><td>删除文件</td></tr>
+<tr><td><strong><code>rm –f</code></strong></td><td>强制删除文件</td></tr>
+<tr><td><strong><code>rm –i</code></strong></td><td>交互删除文件</td></tr>
+</tbody></table>
+</div>
+<h2 id="文件夹创建和删除"><a class="header" href="#文件夹创建和删除">文件夹创建和删除</a></h2>
+<p><code>mkdir</code> 命令用于创建目录文件夹，例如，在当前目录创建文件夹可以使用</p>
+<pre><code>mkdir myfolder
+</code></pre>
+<p>在指定目录创建文件夹可以使用</p>
+<pre><code>mkdir ~/Desktop/myfolder
+</code></pre>
+<p>删除文件夹可以使用 <code>rmdir</code> 命令，默认只能删除空文件夹。使用命令 <code>rm -rf</code> 可以快速简单地递归删除整个文件夹。</p>
+<div class="table-wrapper"><table><thead><tr><th>命令</th><th>用途</th></tr></thead><tbody>
+<tr><td><strong><code>mv</code></strong></td><td>重命名文件夹</td></tr>
+<tr><td><strong><code>rmdir</code></strong></td><td>删除空白文件夹</td></tr>
+<tr><td><strong><code>rm -rf</code></strong></td><td>强制删除文件夹</td></tr>
+</tbody></table>
+</div>
+<h2 id="修改命令行提示符"><a class="header" href="#修改命令行提示符">修改命令行提示符</a></h2>
+<p>命令行工具通过变量 <code>PS1</code> 存储命令行的文本字符串，一般 Linux 发行版会默认设置一个值，例如：</p>
+<pre><code>cs@stickmind:~$ 
+</code></pre>
+<p>通过修改该变量，可以定制显示的内容：</p>
+<pre><code>PS1=&quot;cs102@virtualbox: &quot;
+</code></pre>
+<p>命令提示符将修改为：</p>
+<pre><code>cs102@virtualbox: 
+</code></pre>
+<p><strong>注意</strong>，在终端直接赋值变量名，仅在当前激活的终端有效。重新打开终端，变量内容仍然是默认值。如果我们想永久修改该变量，可以尝试在 <code>.bashrc</code> 中进行设置。</p>
+<h2 id="练习-1"><a class="header" href="#练习-1">练习</a></h2>
+<ol>
+<li>使用 <code>touch</code> 创建两个文件 <code>file1</code> 和 <code>file2</code></li>
+<li>使用 <code>ls -l</code> 检查文件状态</li>
+<li>将 <code>file1</code> 重命名为 <code>new_file1</code></li>
+<li>将 <code>file2</code> 移动到上级目录</li>
+<li>删除 <code>file2</code> 和 <code>new_file1</code></li>
+<li>创建文件夹 <code>dir1</code></li>
+<li>删除 <code>dir1</code></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="文件搜索"><a class="header" href="#文件搜索">文件搜索</a></h1>
+<p>熟练使用查找命令可以节省很多时间并提高工作效率，涉及搜索的主要工具是 <code>find</code> 等实用程序。</p>
+<h2 id="标准文件流"><a class="header" href="#标准文件流">标准文件流</a></h2>
+<p>在执行命令时，默认情况下有三个标准文件流始终打开以供使用：标准输入 <strong><code>stdin</code></strong>、标准输出 <strong><code> stdout</code></strong> 和标准错误   <strong><code>stderr</code></strong>。</p>
+<div class="table-wrapper"><table><thead><tr><th>名称</th><th>符号名</th><th>值</th><th>示例</th></tr></thead><tbody>
+<tr><td>标准输入</td><td><strong><code>stdin</code></strong></td><td>0</td><td>键盘</td></tr>
+<tr><td>标准输出</td><td><strong><code>stdout</code></strong></td><td>1</td><td>终端</td></tr>
+<tr><td>标准错误</td><td><strong><code>stderr</code></strong></td><td>2</td><td>日志</td></tr>
+</tbody></table>
+</div>
+<p><strong><code>stdin</code></strong> 通常是键盘，<strong><code>stdout</code></strong> 和 <strong><code>stderr</code></strong> 通常打印在终端上。利用重定向，也可以将某个文件作为输入 <strong><code>stdin</code></strong>，并将输出 <strong><code>stdout</code></strong> 定向到另一个文件，<strong><code>stderr</code></strong> 通常定向到错误日志文件。</p>
+<p>在 Linux 中，所有打开的文件都由所谓的<strong>文件描述符</strong>（file descriptor）在内部表示的并从零开始，<strong><code>stdin</code></strong> 是 <code>0</code>，<strong><code>stdout</code></strong> 是 <code>1</code>，<strong><code>stderr</code></strong> 是 <code>2</code>。如果还打开了其他文件，则文件描述符继续从 3 开始，并依次增加。</p>
+<h2 id="重定向"><a class="header" href="#重定向">重定向</a></h2>
+<p>通过 Shell，我们可以重定向三个标准文件流，这样我们就可以从一个文件或另一个命令中获得输入，而不是从键盘获得输入。我们可以将输出和错误写入文件，或者用于为后续命令提供输入。</p>
+<p>例如，可以使用 <code>&gt;</code> 符号将 <code>hello</code> 输出定向到某个文件：</p>
+<pre><code>./hello &gt; anyfile
+</code></pre>
+<p>使用 <code>&lt;</code> 符号将某个文件作为输入：</p>
+<pre><code>cat &lt; hello.c
+</code></pre>
+<p>输入输出还可以组合使用：</p>
+<pre><code>./add &lt; infile &gt; outfile
+</code></pre>
+<p>对于 <code>stderr</code> 需要明确指定文件描述符的值：</p>
+<pre><code>./add 2&gt; errfile
+</code></pre>
+<p>如果打算将 <code>stderr</code> 输出到 <code>stdout</code>，则可以使用：</p>
+<pre><code>./add &gt; outfile 2&gt;&amp;1
+</code></pre>
+<h2 id="管道"><a class="header" href="#管道">管道</a></h2>
+<p>UNIX/Linux 的理念是设计许多简单而简短的程序或命令，协同工作来解决复杂的任务，而不是设计一个复杂的程序，通过不同的选项和模式来完成。为了实现这一点，UNIX/Linux 大量使用<strong>管道</strong>来实现这一目的，通过管道可以将一个命令或程序的输出作为另一个命令或程序的输入。</p>
+<p>可以通过管道符号 <code>|</code> 来实现管道操作：</p>
+<pre><code>$ cmd1 | cmd2 | cmd3
+</code></pre>
+<p>以上命令非常有效，因为 <code>cmd2</code> 和 <code>cmd3</code> 不必等待先前的管道命令完成，就可以开始处理其输入流中的数据；特别是在多核心系统上，可用的计算能力得到了更好的利用。</p>
+<p>另一点是，管道之间的输入输出无需存储到硬盘上，硬盘的读写同样效率低下。</p>
+<h2 id="查找"><a class="header" href="#查找">查找</a></h2>
+<p><strong><code>find</code></strong> 是 Linux 系统管理员日常生活中非常有用且经常使用的实用程序。它可以从任意特定目录（或目录集）向下递归文件系统，并定位符合指定条件的文件，默认路径名始终为当前工作目录。</p>
+<p>例如，管理员有时会花几周的时间扫描的一个潜在的核心文件，以便将其删除。有时候也用于清理临时目录 <code>/tmp</code> 或缓存目录 <code>/var/cache/</code> 中的非必要文件。许多发行版也内置一些脚本程序，定期清理这些目录。</p>
+<p><img src="topic_0/./assets/find.png" alt="find" /></p>
+<p>不指定参数的情况下，<code>find</code> 会递归列出当前目录下所有的文件。常用的选项有：</p>
+<ul>
+<li>
+<p><code>-name</code> 列出包含某个字符串的文件</p>
+<pre><code>find /usr -name gcc
+</code></pre>
+</li>
+<li>
+<p><code>-iname</code> 列出不包含某个字符串的文件</p>
+<pre><code>find /usr -iname gcc
+</code></pre>
+</li>
+<li>
+<p><code>-type</code> 限定文件的类型，例如 <code>d</code> 表示目录，<code>l</code> 表示符号链接，<code>f</code> 表示普通文件</p>
+<pre><code>find /usr -type d -name gcc
+</code></pre>
+<pre><code>find /usr -type f -name gcc
+</code></pre>
+</li>
+</ul>
+<p><code>find</code> 的另一个用途是能够在符合搜索条件的文件上运行命令，需要使用选型 <code>-exec</code>。例如，查找并删除 <code>.swp</code> 后缀的文件：</p>
+<pre><code>find -name &quot;*.swp&quot; -exec rm {} ';'
+</code></pre>
+<p>其中 <code>{}</code> 充当占位符，用于替换搜索到的文件名。需要注意的是，命令必须以 <code>';'</code> 或 <code>\;</code> 结尾。</p>
+<h2 id="练习-2"><a class="header" href="#练习-2">练习</a></h2>
+<p>以 <code>/</code> 开头，搜索包含 <code>init.d</code> 的文件。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="从-c-到-c"><a class="header" href="#从-c-到-c">从 C++ 到 C</a></h1>
+<p>本节我们会使用 C 语言复习 CS101 中的一些概念，并改写一些 C++ 程序，逐步上手 C 语言的开发。</p>
+<p>相信大家还记得 CS101 库中的两个重要的接口工具 <a href="https://cppdoc.stickmind.com/strlib.html"><code>strlib.h</code></a> 和 <a href="https://cppdoc.stickmind.com/filelib.html"><code>filelib.h</code></a>。这些抽象接口极大地方便了我们编写字符串处理和文件 I/O 相关的程序。所以在本课程的教学方式上，我们依然遵循抽象思维的观念，避免较早地涉及底层的细节。在入门示例中，重点抽象了以下两个类型 <code>string</code> 和 <code>stream</code>，以便在不涉及指针的情况下，就能完成字符串和文件的处理工作。</p>
+<p>希望通过这样的方式，方便大家对比学习，能够将现有的知识迁移到新的语境中。</p>
+<pre><code class="language-c">/*
+ * Type: string
+ * ------------
+ * The type string is identical to the type char *, which is
+ * traditionally used in C programs.  The main point of defining a
+ * new type is to improve program readability.   At the abstraction
+ * levels at which the type string is used, it is usually not
+ * important to take the string apart into its component characters.
+ * Declaring it as a string emphasizes this atomicity.
+ */
+
+typedef char* string;
+
+/*
+ * Type: stream
+ * ------------
+ * Like string, the stream type is used to provide additional
+ * readability and is defined to be equivalent to FILE *
+ * (which is particularly confusing because it violates
+ * standard case conventions).
+ */
+
+typedef FILE* stream;
+</code></pre>
+<p>为了照顾部分编程基础较为薄弱的同学，本次课程也会引入 CMake 并介绍一种较为方便的 VS Code 开发工作流，方便大家课后自行练习、巩固。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="实验-0上手-linux-开发环境"><a class="header" href="#实验-0上手-linux-开发环境">实验 0：上手 Linux 开发环境</a></h1>
 <p>本课程开发环境选用远程 Linux 云端服务器和命令行工具，搭配本地终端和 VS Code 即可完成所有练习。</p>
 <p>本次实验将带大家练习远程开发的流程，实验结束后，你应该能够连接上课程的远程服务器，并能够使用终端命令，搭配 VS Code 进行代码编辑。</p>
@@ -296,40 +730,8 @@ Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
 <li>查看当前文件夹空间：<code>du --max-depth=1 -h</code></li>
 <li>修改登录密码：<code>passwd</code></li>
 </ul>
-<hr />
-<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://wiki.mbalib.com/wiki/%E7%BB%88%E7%AB%AF%EF%BC%88%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%89">终端</a>是一台电子计算机或者计算机系统，用来让用户输入数据，及显示其计算结果的机器。</p>
-</div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="vs-code-远程开发工作流"><a class="header" href="#vs-code-远程开发工作流">VS Code 远程开发工作流</a></h1>
+<h2 id="基于-sftp-远程开发工作流"><a class="header" href="#基于-sftp-远程开发工作流">基于 SFTP 远程开发工作流</a></h2>
 <p>使用命令行成功登录服务器后，说明你的计算机已经包含了 SSH 等工具。为了便于开发，可以使用流行的 VS Code 文本编辑器辅助编辑、同步项目代码。</p>
-<blockquote>
-<p>以下内容默认你已经成功使用终端，登录过远程服务器。如果还没有尝试过，请返回上一节。</p>
-</blockquote>
-<h2 id="安装"><a class="header" href="#安装">安装</a></h2>
-<p>前往官网下载安装 <a href="https://code.visualstudio.com/">VS Code</a>，接下来安装 <code>SFTP</code> 插件。在插件市场搜索 <code>SFTP</code>，选择安装 Natizyskunk 开发的 <code>SFTP</code> 插件，如图所示。</p>
-<p><img src="topic_0/sftp.png" alt="sftp" /></p>
-<h2 id="配置"><a class="header" href="#配置">配置</a></h2>
-<p>安装完插件之后，可以使用本课程提供的初始项目 <code>starter-proj.zip</code>，该项目已设置好 VS Code 和 <code>SFTP</code> 配置框架。解压后使用 VS Code 打开 <code>starter-proj</code> 文件夹。在 <code>.vscode</code> 文件夹下，编辑 <code>sftp.json</code> 文件修改以下几个信息：</p>
-<ul>
-<li><code>username</code>：服务器用户名</li>
-<li><code>password</code>：服务器密码</li>
-<li><code>remotePath</code>：服务器上需要编辑的项目路径，例如 <code>/home/xuehao/cs102/lab0/</code></li>
-</ul>
-<p><img src="topic_0/sftp_config.png" alt="sftp-config" /></p>
-<h2 id="使用"><a class="header" href="#使用">使用</a></h2>
-<blockquote>
-<p><strong>⚠️注意</strong></p>
-<p>参照上一步配置的 <code>remotePath</code>，必须先在服务器上提前创建好这些目录，才能进行接下来的操作。</p>
-</blockquote>
-<p>配置好后，点击 VS Code 菜单栏 <strong>Help</strong> 选择 <strong>Show All Commands</strong>，或直接按 <strong>F1</strong> 快捷键，在弹出的命令列表中搜索 SFTP。选择 &quot;<strong>SFTP: Download Project</strong>&quot;，随后选择默认保存位置，远程服务器中的项目将会自动下载到本地的初始项目文件夹中。</p>
-<p><img src="topic_0/using_sftp.png" alt="sftp-use" /></p>
-<p>在本地编辑完文件并保存后，SFTP 插件会自动将更新后的文件同步到远程服务器。编译、测试、调试等任务，可以通过终端 Terminal 在远程服务器上进行。</p>
-<blockquote>
-<p><strong>⚠️注意</strong></p>
-<p><strong>添加文件</strong>：如果之前没有创建任何项目文件，那么当你在本地或服务器中创建文件时，并不会自动同步。此时可以使用 &quot;<strong>SFTP: Sync Remote -&gt; Local</strong>&quot; 或 &quot;<strong>SFTP: Sync Local -&gt; Remote</strong>&quot; 手动同步。</p>
-<p><strong>删除文件</strong>：删除文件比较特殊，以上三条命令，对删除文件不起作用。如果有文件需要删除，必须在本地和服务器中分别手动删除。</p>
-</blockquote>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="vs-code-官方远程插件仅供了解"><a class="header" href="#vs-code-官方远程插件仅供了解">VS Code 官方远程插件（仅供了解）</a></h1>
 <blockquote>
 <p><strong>❓FAQ</strong> 为什么本课程不推荐使用 VS Code 官方 Remote 插件？</p>
 <p>如果使用官方 Remote 插件，一旦连接服务器，VS Code 会在 <code>home</code> 目录不断生成 <code>.vscode-server</code> 垃圾文件，严重的时候甚至达到几个 GB 的空间。</p>
@@ -337,27 +739,43 @@ Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
 <p>如此高的资源消耗，即便国内外各大高校自建的校内服务器，也无法承受。</p>
 <p><em>参考：<a href="https://github.com/microsoft/vscode-remote-release/issues/6429">Copies of vscode-server installed on school servers take up excessive storage and RAM</a></em></p>
 </blockquote>
-<p>在插件市场搜索并安装 <strong>Remote - SSH</strong> 插件——可以看出该插件至今仍然是 Preview 状态，尚未稳定。</p>
-<p><img src="topic_0/remote-ssh.png" alt="Remote - SSH" /></p>
-<p>插件安装完成后，点击设置，输入 “<strong>locally</strong>”，在 Remote 插件配置中，勾选 “<strong>Remote: Download Extensions Locally</strong>”。</p>
-<p><img src="topic_0/remote-ssh-config.png" alt="Remote - SSH Config" /></p>
-<p>配置完插件后，在工具栏选择 Remote Explorer，点击 SSH 后面的 <strong><code>+</code></strong> 号。在弹出的输入窗口中，输入</p>
-<pre><code>ssh YourName@106.14.165.94
-</code></pre>
-<p>随后会提示选择配置文件保存位置，此处直接“回车”选择默认位置即可。</p>
-<p><img src="topic_0/remote-ssh-connect.png" alt="Remote - SSH Connect" /></p>
-<p>此时点击 Remote 右侧的刷新按钮，就可以看到服务器 IP。连接该服务器，只需要点击 IP 右侧的箭头，随后输入你的账户密码就可以登录。登录成功后，可以在 VS Code 右下角看到连接状态。</p>
-<p><img src="topic_0/remote-ssh-ok.png" alt="Remote - SSH OK" /></p>
-<p>服务器连接成功后，通过 VS Code 菜单栏 <strong>File</strong> 可以选择 “<strong>Open File/Open Folder</strong>” 编辑你的文件或项目。</p>
+<h2 id="安装-sftp-插件"><a class="header" href="#安装-sftp-插件">安装 SFTP 插件</a></h2>
+<p>在 VS Code 插件市场搜索 <code>SFTP</code>，选择安装 Natizyskunk 开发的 <code>SFTP</code> 插件，如图所示。</p>
+<p><img src="topic_0/./assets/sftp.png" alt="sftp" /></p>
+<h2 id="配置"><a class="header" href="#配置">配置</a></h2>
+<p>安装完插件之后，可以使用本课程提供的初始项目 <code>starter-proj.zip</code>，该项目已设置好 VS Code 和 <code>SFTP</code> 配置框架。解压后使用 VS Code 打开 <code>starter-proj</code> 文件夹。在 <code>.vscode</code> 文件夹下，编辑 <code>sftp.json</code> 文件修改以下几个信息：</p>
+<ul>
+<li><code>username</code>：服务器用户名</li>
+<li><code>password</code>：服务器密码</li>
+<li><code>remotePath</code>：服务器上需要编辑的项目路径，例如 <code>/home/xuehao/cs102/lab0/</code></li>
+</ul>
+<p><img src="topic_0/./assets/sftp_config.png" alt="sftp-config" /></p>
+<h2 id="使用"><a class="header" href="#使用">使用</a></h2>
 <blockquote>
 <p><strong>⚠️注意</strong></p>
-<p>以上练习完成后，可以使用 <code>ls -a</code> 命令查看 home 目录，此时你会发现一个 <code>.vscode-server</code> 文件夹。</p>
-<p>结束练习后，关闭 VS Code，然后使用 <code>rm -r .vscode-server</code> 命令删除 <code>.vscode-server</code> 文件夹。</p>
+<p>参照上一步配置的 <code>remotePath</code>，必须先在服务器上提前创建好这些目录，才能进行接下来的操作。</p>
+</blockquote>
+<p>配置好后，点击 VS Code 菜单栏 <strong>Help</strong> 选择 <strong>Show All Commands</strong>，或直接按 <strong>F1</strong> 快捷键，在弹出的命令列表中搜索 SFTP。选择 &quot;<strong>SFTP: Download Project</strong>&quot;，随后选择默认保存位置，远程服务器中的项目将会自动下载到本地的初始项目文件夹中。</p>
+<p><img src="topic_0/./assets/using_sftp.png" alt="sftp-use" /></p>
+<p>在本地编辑完文件并保存后，SFTP 插件会自动将更新后的文件同步到远程服务器。编译、测试、调试等任务，可以通过终端 Terminal 在远程服务器上进行。</p>
+<blockquote>
+<p><strong>⚠️注意</strong></p>
+<p><strong>添加文件</strong>：如果之前没有创建任何项目文件，那么当你在本地或服务器中创建文件时，并不会自动同步。此时可以使用 &quot;<strong>SFTP: Sync Remote -&gt; Local</strong>&quot; 或 &quot;<strong>SFTP: Sync Local -&gt; Remote</strong>&quot; 手动同步。</p>
+<p><strong>删除文件</strong>：删除文件比较特殊，以上三条命令，对删除文件不起作用。如果有文件需要删除，必须在本地和服务器中分别手动删除。</p>
+</blockquote>
+<blockquote>
+<p><strong>⚠️注意</strong></p>
+<p>如果不小心使用 VS Code 官方远程插件，可以使用 <code>ls -a</code> 命令查看你的服务器目录，此时你会发现一个 <code>.vscode-server</code> 文件夹。</p>
+<p>可以使用使用 <code>rm -r .vscode-server</code> 命令删除该目录。</p>
 </blockquote>
 <blockquote>
 <p><strong>⚠️注意</strong></p>
 <p>严禁使用 Jetbrains Clion/Fleet 连接服务器！一旦连接，此类开发工具会在服务器上下载超过 2 GB 的 Java 依赖。</p>
 </blockquote>
+<hr />
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://wiki.mbalib.com/wiki/%E7%BB%88%E7%AB%AF%EF%BC%88%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%89">终端</a>是一台电子计算机或者计算机系统，用来让用户输入数据，及显示其计算结果的机器。</p>
+</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="更新记录"><a class="header" href="#更新记录">更新记录</a></h1>
 
                     </main>

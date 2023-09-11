@@ -1,9 +1,9 @@
 ---
 type: lab
-date: 2023-8-24T7:30:00+00:00
+date: 2023-9-24T7:30:00+00:00
 title: '实验 0. Remote Development On Linux'
 tldr: "本次实验将带大家练习远程开发的流程。完成本次实验，你将能够连接上课程的远程服务器，并使用终端命令搭配 VS Code/Vim/Emacs 进行远程开发。"
-pdf: https://h8pqt7tpdf.feishu.cn/file/boxcnSbmWGJweGTbE5XxbPJYiwh
+pdf: /reader/topic_0/lab.html
 hide_from_announcments: true
 attachment: /static_files/starter-proj.zip
 ---

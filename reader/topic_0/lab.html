@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>实验 0：上手 Linux 开发环境 - 计算机组成与系统</title>
+        <title>实验 0：使用课程服务器 - 计算机组成与系统</title>
 
 
         <!-- Custom HTML head -->
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">1.1.</strong> Linux 命令行</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/lab.html" class="active"><strong aria-hidden="true">2.</strong> 实验 0：上手 Linux 开发环境</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/lab_section_1.html"><strong aria-hidden="true">2.1.</strong> VS Code 远程开发工作流</a></li><li class="chapter-item expanded "><a href="../topic_0/lab_section_2.html"><strong aria-hidden="true">2.2.</strong> VS Code 官方远程插件（仅供了解）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li class="chapter-item expanded "><a href="../topic_0/lab.html" class="active"><strong aria-hidden="true">4.</strong> 实验 0：使用课程服务器</a></li><li class="chapter-item expanded affix "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded affix "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -203,6 +203,48 @@ Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
 <li>查看当前文件夹空间：<code>du --max-depth=1 -h</code></li>
 <li>修改登录密码：<code>passwd</code></li>
 </ul>
+<h2 id="基于-sftp-远程开发工作流"><a class="header" href="#基于-sftp-远程开发工作流">基于 SFTP 远程开发工作流</a></h2>
+<p>使用命令行成功登录服务器后，说明你的计算机已经包含了 SSH 等工具。为了便于开发，可以使用流行的 VS Code 文本编辑器辅助编辑、同步项目代码。</p>
+<blockquote>
+<p><strong>❓FAQ</strong> 为什么本课程不推荐使用 VS Code 官方 Remote 插件？</p>
+<p>如果使用官方 Remote 插件，一旦连接服务器，VS Code 会在 <code>home</code> 目录不断生成 <code>.vscode-server</code> 垃圾文件，严重的时候甚至达到几个 GB 的空间。</p>
+<p>除此之外，官方 Remote 插件内存占用也比较高，每个用户都会消耗几百 MB 的内存资源。</p>
+<p>如此高的资源消耗，即便国内外各大高校自建的校内服务器，也无法承受。</p>
+<p><em>参考：<a href="https://github.com/microsoft/vscode-remote-release/issues/6429">Copies of vscode-server installed on school servers take up excessive storage and RAM</a></em></p>
+</blockquote>
+<h2 id="安装-sftp-插件"><a class="header" href="#安装-sftp-插件">安装 SFTP 插件</a></h2>
+<p>在 VS Code 插件市场搜索 <code>SFTP</code>，选择安装 Natizyskunk 开发的 <code>SFTP</code> 插件，如图所示。</p>
+<p><img src="./assets/sftp.png" alt="sftp" /></p>
+<h2 id="配置"><a class="header" href="#配置">配置</a></h2>
+<p>安装完插件之后，可以使用本课程提供的初始项目 <code>starter-proj.zip</code>，该项目已设置好 VS Code 和 <code>SFTP</code> 配置框架。解压后使用 VS Code 打开 <code>starter-proj</code> 文件夹。在 <code>.vscode</code> 文件夹下，编辑 <code>sftp.json</code> 文件修改以下几个信息：</p>
+<ul>
+<li><code>username</code>：服务器用户名</li>
+<li><code>password</code>：服务器密码</li>
+<li><code>remotePath</code>：服务器上需要编辑的项目路径，例如 <code>/home/xuehao/cs102/lab0/</code></li>
+</ul>
+<p><img src="./assets/sftp_config.png" alt="sftp-config" /></p>
+<h2 id="使用"><a class="header" href="#使用">使用</a></h2>
+<blockquote>
+<p><strong>⚠️注意</strong></p>
+<p>参照上一步配置的 <code>remotePath</code>，必须先在服务器上提前创建好这些目录，才能进行接下来的操作。</p>
+</blockquote>
+<p>配置好后，点击 VS Code 菜单栏 <strong>Help</strong> 选择 <strong>Show All Commands</strong>，或直接按 <strong>F1</strong> 快捷键，在弹出的命令列表中搜索 SFTP。选择 &quot;<strong>SFTP: Download Project</strong>&quot;，随后选择默认保存位置，远程服务器中的项目将会自动下载到本地的初始项目文件夹中。</p>
+<p><img src="./assets/using_sftp.png" alt="sftp-use" /></p>
+<p>在本地编辑完文件并保存后，SFTP 插件会自动将更新后的文件同步到远程服务器。编译、测试、调试等任务，可以通过终端 Terminal 在远程服务器上进行。</p>
+<blockquote>
+<p><strong>⚠️注意</strong></p>
+<p><strong>添加文件</strong>：如果之前没有创建任何项目文件，那么当你在本地或服务器中创建文件时，并不会自动同步。此时可以使用 &quot;<strong>SFTP: Sync Remote -&gt; Local</strong>&quot; 或 &quot;<strong>SFTP: Sync Local -&gt; Remote</strong>&quot; 手动同步。</p>
+<p><strong>删除文件</strong>：删除文件比较特殊，以上三条命令，对删除文件不起作用。如果有文件需要删除，必须在本地和服务器中分别手动删除。</p>
+</blockquote>
+<blockquote>
+<p><strong>⚠️注意</strong></p>
+<p>如果不小心使用 VS Code 官方远程插件，可以使用 <code>ls -a</code> 命令查看你的服务器目录，此时你会发现一个 <code>.vscode-server</code> 文件夹。</p>
+<p>可以使用使用 <code>rm -r .vscode-server</code> 命令删除该目录。</p>
+</blockquote>
+<blockquote>
+<p><strong>⚠️注意</strong></p>
+<p>严禁使用 Jetbrains Clion/Fleet 连接服务器！一旦连接，此类开发工具会在服务器上下载超过 2 GB 的 Java 依赖。</p>
+</blockquote>
 <hr />
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
 <p><a href="https://wiki.mbalib.com/wiki/%E7%BB%88%E7%AB%AF%EF%BC%88%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%89">终端</a>是一台电子计算机或者计算机系统，用来让用户输入数据，及显示其计算结果的机器。</p>
@@ -212,11 +254,11 @@ Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../topic_0/linux_command.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../topic_0/from_cxx_to_c.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../topic_0/lab_section_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../misc/contributors.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -226,11 +268,11 @@ Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../topic_0/linux_command.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../topic_0/from_cxx_to_c.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../topic_0/lab_section_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../misc/contributors.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
