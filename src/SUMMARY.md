@@ -12,11 +12,13 @@
   - [文件操作](topic_0/linux_command_pt2.md)
   - [文件搜索](topic_0/linux_command_pt3.md)
 - [从 C++ 到 C](topic_0/from_cxx_to_c.md)
-  - [simpio.h](topic_0/simpio.md)
-  - [strlib.h](topic_0/strlib.md)
+  - [simpio.h](topic_0/from_cxx_to_c_simpio.md)
+  - [strlib.h](topic_0/from_cxx_to_c_strlib.md)
+  - [Pig Latin](topic_0/from_cxx_to_c_pig_latin.md)
 - [实验 0：使用课程服务器](topic_0/lab_0.md)
 - [作业 0：上手 Linux 和 C](topic_0/assign_0.md)
   - [入侵者检测](topic_0/assign_0_pt1.md)
+  - [谢尔宾斯基分形](topic_0/assign_0_pt2.md)
 
 # 数据的表示 Data Representation
 
