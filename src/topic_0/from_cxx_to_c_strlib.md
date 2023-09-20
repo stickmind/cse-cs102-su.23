@@ -1,11 +1,51 @@
-# simpio.h
+# strlib.h
 
 该接口定义了动态分配字符串的通用库。传统 C 字符串与使用此接口定义的字符串之间的主要区别是：
 
 - `strlib.h` 接口负责内存分配，确保有足够的空间来保存每个字符串操作的结果。
 - `strlib.h` 接口的客户端应将所有字符串视为不可变，并避免写入字符数组。
 
-## 接口
+## 字符串抽象数据类型
+
+字符串在 C 中就是一个字符序列（数组）。如果想要完整地掌握 C 字符串，我们需要从多个层面、不同角度来仔细研究。涉及到的知识点，保守估计也要四五节课的时间来讨论。
+
+以抽象数据类型来看待字符串，可以将其当作一个逻辑单元来处理，无需过早地关注数据表示的内部细节。这也是我们一直推崇的**抽象思维方法**，即关注抽象层的行为，在学会如何有效使用之前，不必沉溺于细节问题。
+
+以抽象观点处理字符串，我们可以利用 `strlib.h` 迁移很多 CS101 中的字符串处理案例。遗憾的是，C 标准库并没有提供现成的容器，在涉及中间数据存储时，暂时不太方便处理。后续学习完数组后，我们可以使用动态数组来实现这一目的。随着课程的深入，最终我们应该有能力实现一个泛型的 C 版本的容器，例如 `vector`、`stack` 等。
+
+关于字符串的分层抽象如下所示：
+
+| 分层抽象      |
+| ------------- |
+| `strlib.h` 接口 |
+| `string.h` 接口 |
+| 语言级操作    |
+| 机器级操作    |
+
+其中，`string.h` 是 C 标准接口，后续课程会重点介绍。这也是你必须掌握的接口，但是用好该接口需要掌握很多底层的细节。常规的字符串处理，并不需要关注太多底层的细节，所以这里引入了 `string` 类型，并在标准库基础上封装了更好用的 `strlib.h` 接口，使得字符串操作相对容易些。
+
+
+## `strlib.h` 接口
+
+提起抽象类型，我们就要确定可以在该类型上实施的操作，这些被称为基本操作。
+
+一些常见的操作比如：
+
+- 如何定义一个字符串变量/常量？
+- 如何从用户那里读入一个字符串？
+- 如何在屏幕上输出一个字符串？
+
+除此之外，我们还需要：
+
+- 如何确定一个字符串的长度？
+- 如何比较两个字符串？是否相等？是否靠前？
+- 如何选择字符串中某个位置的字符？
+- 如何连接两个字符串？
+- 如何将单个字符转换为字符串？
+- 如何对字符串进行切分？
+- 如何判断一个字符串是否包含另一个字符串？
+
+以上所有的操作，在 C++ 中都可以方便地通过类和成员方法来定义。虽然 C 没有 C++ 对象和方法的概念，但是我们可以使用自由函数来替代。
 
 | 函数                           | 功能                                                                                                                   |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
@@ -26,213 +66,3 @@
 | `RealToString(d)`              | 将浮点数转换为相应的数字字符串                                                                                         |
 | `StringToReal(s)`              | 将数字字符串转换为浮点数                                                                                               |
 
-## 接口详情
-
-```c
-/* Section 1 -- Basic string operations */
-
-/*
- * Function: ConcatString
- * Usage: s = ConcatString(s1, s2);
- * --------------------------
- * This function concatenates two strings by joining them end
- * to end.  For example, ConcatString("ABC", "DE") returns the string
- * "ABCDE".
- */
-
-string ConcatString(string s1, string s2);
-
-/*
- * Function: IthChar
- * Usage: ch = IthChar(s, i);
- * --------------------------
- * This function returns the character at position i in the
- * string s.  It is included in the library to make the type
- * string a true abstract type in the sense that all of the
- * necessary operations can be invoked using functions. Calling
- * IthChar(s, i) is like selecting s[i], except that IthChar
- * checks to see if i is within the range of legal index
- * positions, which extend from 0 to StringLength(s).
- * IthChar(s, StringLength(s)) returns the null character
- * at the end of the string.
- */
-
-char IthChar(string s, int i);
-
-/*
- * Function: SubString
- * Usage: t = SubString(s, p1, p2);
- * --------------------------------
- * SubString returns a copy of the substring of s consisting
- * of the characters between index positions p1 and p2,
- * inclusive.  The following special cases apply:
- *
- * 1. If p1 is less than 0, it is assumed to be 0.
- * 2. If p2 is greater than the index of the last string
- *    position, which is StringLength(s) - 1, then p2 is
- *    set equal to StringLength(s) - 1.
- * 3. If p2 < p1, SubString returns the empty string.
- */
-
-string SubString(string s, int p1, int p2);
-
-/*
- * Function: CharToString
- * Usage: s = CharToString(ch);
- * ----------------------------
- * This function takes a single character and returns a
- * one-character string consisting of that character.  The
- * CharToString function is useful, for example, if you
- * need to concatenate a string and a character.  Since
- * ConcatString requires two strings, you must first convert
- * the character into a string.
- */
-
-string CharToString(char ch);
-
-/*
- * Function: StringLength
- * Usage: len = StringLength(s);
- * -----------------------------
- * This function returns the length of s.
- */
-
-int StringLength(string s);
-
-/*
- * Function: CopyString
- * Usage: newstr = CopyString(s);
- * ------------------------------
- * CopyString copies the string s into dynamically allocated
- * storage and returns the new string.  This function is not
- * ordinarily required if this package is used on its own,
- * but is often necessary when you are working with more than
- * one string package.
- */
-
-string CopyString(string s);
-
-/* Section 2 -- String comparison functions */
-
-/*
- * Function: StringEqual
- * Usage: if (StringEqual(s1, s2)) ...
- * -----------------------------------
- * This function returns true if the strings s1 and s2 are
- * equal.  For the strings to be considered equal, every
- * character in one string must precisely match the
- * corresponding character in the other.  Uppercase and
- * lowercase characters are considered to be different.
- */
-
-bool StringEqual(string s1, string s2);
-
-/*
- * Function: StringCompare
- * Usage: if (StringCompare(s1, s2) < 0) ...
- * -----------------------------------------
- * This function returns a number less than 0 if string s1
- * comes before s2 in alphabetical order, 0 if they are equal,
- * and a number greater than 0 if s1 comes after s2.  The
- * ordering is determined by the internal representation used
- * for characters, which is usually ASCII.
- */
-
-int StringCompare(string s1, string s2);
-
-/* Section 3 -- Search functions */
-
-/*
- * Function: FindChar
- * Usage: p = FindChar(ch, text, start);
- * -------------------------------------
- * Beginning at position start in the string text, this
- * function searches for the character ch and returns the
- * first index at which it appears or -1 if no match is
- * found.
- */
-
-int FindChar(char ch, string text, int start);
-
-/*
- * Function: FindString
- * Usage: p = FindString(str, text, start);
- * ----------------------------------------
- * Beginning at position start in the string text, this
- * function searches for the string str and returns the
- * first index at which it appears or -1 if no match is
- * found.
- */
-
-int FindString(string str, string text, int start);
-
-/* Section 4 -- Case-conversion functions */
-
-/*
- * Function: ConvertToLowerCase
- * Usage: s = ConvertToLowerCase(s);
- * ---------------------------------
- * This function returns a new string with all
- * alphabetic characters converted to lower case.
- */
-
-string ConvertToLowerCase(string s);
-
-/*
- * Function: ConvertToUpperCase
- * Usage: s = ConvertToUpperCase(s);
- * ---------------------------------
- * This function returns a new string with all
- * alphabetic characters converted to upper case.
- */
-
-string ConvertToUpperCase(string s);
-
-/* Section 5 -- Functions for converting numbers to strings */
-
-/*
- * Function: IntegerToString
- * Usage: s = IntegerToString(n);
- * ------------------------------
- * This function converts an integer into the corresponding
- * string of digits.  For example, IntegerToString(123)
- * returns "123" as a string.
- */
-
-string IntegerToString(int n);
-
-/*
- * Function: StringToInteger
- * Usage: n = StringToInteger(s);
- * ------------------------------
- * This function converts a string of digits into an integer.
- * If the string is not a legal integer or contains extraneous
- * characters, StringToInteger signals an error condition.
- */
-
-int StringToInteger(string s);
-
-/*
- * Function: RealToString
- * Usage: s = RealToString(d);
- * ---------------------------
- * This function converts a floating-point number into the
- * corresponding string form.  For example, calling
- * RealToString(23.45) returns "23.45".  The conversion is
- * the same as that used for "%G" format in printf.
- */
-
-string RealToString(double d);
-
-/*
- * Function: StringToReal
- * Usage: d = StringToReal(s);
- * ---------------------------
- * This function converts a string representing a real number
- * into its corresponding value.  If the string is not a
- * legal floating-point number or if it contains extraneous
- * characters, StringToReal signals an error condition.
- */
-
-double StringToReal(string s);
-```

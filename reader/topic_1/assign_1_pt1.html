@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>饱和计算 - 计算机组成与系统</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="本书将从 C 语言开始，逐步深入到底层汇编语言，一步步带你梳理计算机底层的逻辑。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">前言</a></li><li class="chapter-item expanded affix "><li class="part-title">开发环境 Linux & C</li><li class="chapter-item expanded "><a href="../topic_0/linux_intro.html"><strong aria-hidden="true">1.</strong> Linux 介绍</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_on_windows.html"><strong aria-hidden="true">1.1.</strong> Windows 模拟 Linux 环境</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_virtual_box.html"><strong aria-hidden="true">1.2.</strong> Ubuntu 虚拟机安装及配置</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/linux_command.html"><strong aria-hidden="true">2.</strong> Linux 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt1.html"><strong aria-hidden="true">2.1.</strong> 基本命令</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt2.html"><strong aria-hidden="true">2.2.</strong> 文件操作</a></li><li class="chapter-item expanded "><a href="../topic_0/linux_command_pt3.html"><strong aria-hidden="true">2.3.</strong> 文件搜索</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c.html"><strong aria-hidden="true">3.</strong> 从 C++ 到 C</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c_simpio.html"><strong aria-hidden="true">3.1.</strong> simpio.h</a></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c_strlib.html"><strong aria-hidden="true">3.2.</strong> strlib.h</a></li><li class="chapter-item expanded "><a href="../topic_0/from_cxx_to_c_pig_latin.html"><strong aria-hidden="true">3.3.</strong> Pig Latin</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_0/lab_0.html"><strong aria-hidden="true">4.</strong> 实验 0：上手 Linux 开发环境</a></li><li class="chapter-item expanded "><a href="../topic_0/assign_0.html"><strong aria-hidden="true">5.</strong> 作业 0：使用 Linux 和 C</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_0/assign_0_pt1.html"><strong aria-hidden="true">5.1.</strong> 入侵者检测</a></li><li class="chapter-item expanded "><a href="../topic_0/assign_0_pt2.html"><strong aria-hidden="true">5.2.</strong> 谢尔宾斯基分形</a></li><li class="chapter-item expanded "><a href="../topic_0/assign_0_pt3.html"><strong aria-hidden="true">5.3.</strong> 作业提交</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据的表示 Data Representation</li><li class="chapter-item expanded "><a href="../topic_1/num_base.html"><strong aria-hidden="true">6.</strong> 位和字节</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_1/num_base_pt1.html"><strong aria-hidden="true">6.1.</strong> 二进制</a></li><li class="chapter-item expanded "><a href="../topic_1/num_base_pt2.html"><strong aria-hidden="true">6.2.</strong> 十六进制</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_1/int_rep.html"><strong aria-hidden="true">7.</strong> 整数的表示</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_1/int_rep_pt1.html"><strong aria-hidden="true">7.1.</strong> 无符号整型</a></li><li class="chapter-item expanded "><a href="../topic_1/int_rep_pt2.html"><strong aria-hidden="true">7.2.</strong> 有符号整型</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_1/overflow.html"><strong aria-hidden="true">8.</strong> 整型溢出</a></li><li class="chapter-item expanded "><a href="../topic_1/conversion.html"><strong aria-hidden="true">9.</strong> 整型转换</a></li><li class="chapter-item expanded "><a href="../topic_1/bitwise.html"><strong aria-hidden="true">10.</strong> 位运算</a></li><li class="chapter-item expanded "><a href="../topic_1/bitmask.html"><strong aria-hidden="true">11.</strong> 位掩码</a></li><li class="chapter-item expanded "><a href="../topic_1/lab_1.html"><strong aria-hidden="true">12.</strong> 实验 1：数据的表示</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_1/lab_1_pt1.html"><strong aria-hidden="true">12.1.</strong> 位运算</a></li><li class="chapter-item expanded "><a href="../topic_1/lab_1_pt2.html"><strong aria-hidden="true">12.2.</strong> 圆整</a></li><li class="chapter-item expanded "><a href="../topic_1/lab_1_pt3.html"><strong aria-hidden="true">12.3.</strong> 中点计算</a></li><li class="chapter-item expanded "><a href="../topic_1/lab_1_pt4.html"><strong aria-hidden="true">12.4.</strong> 工作流练习</a></li></ol></li><li class="chapter-item expanded "><a href="../topic_1/assign_1.html"><strong aria-hidden="true">13.</strong> 作业 1：有趣的位</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../topic_1/assign_1_pt1.html" class="active"><strong aria-hidden="true">13.1.</strong> 饱和计算</a></li><li class="chapter-item expanded "><a href="../topic_1/assign_1_pt2.html"><strong aria-hidden="true">13.2.</strong> 细胞自动机</a></li><li class="chapter-item expanded "><a href="../topic_1/assign_1_pt3.html"><strong aria-hidden="true">13.3.</strong> UTF-8</a></li><li class="chapter-item expanded "><a href="../topic_1/assign_1_pt4.html"><strong aria-hidden="true">13.4.</strong> 测试与提交</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数组和指针 Array & Pointer</li><li class="chapter-item expanded affix "><li class="part-title">栈和堆 Stack & Heap</li><li class="chapter-item expanded affix "><li class="part-title">泛型编程 Generic C</li><li class="chapter-item expanded affix "><li class="part-title">汇编语言 x86-64 Assembly</li><li class="chapter-item expanded affix "><li class="part-title">堆分配器 Heap Allocator</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">更新记录</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">计算机组成与系统</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="饱和计算"><a class="header" href="#饱和计算">饱和计算</a></h1>
+<p>程序 <code>sat</code> 执行合成的饱和加法运算，饱和加法将结果限制在可表示的范围内。与补码加法“超范围即溢出”的行为不同，饱和加法在出现正溢出时返回该类型的最大值，在出现负溢出时返回最小值。饱和计算函数在图形学和数字信号处理应用中非常常见。</p>
+<p>以下是 <code>sat</code> 程序的两个示例。第一个示例打印出 8 位有符号整数的取值范围是 \([-128, 127]\)。第二个示例尝试将 126 加到 5，结果会溢出并保持在最大值 127。</p>
+<pre><code class="language-Shell">$ ./sat 8
+8-bit signed integer range
+min: -128   0xffffffffffffff80
+max:  127   0x000000000000007f
+$ ./sat 8 126 5
+126 + 5 = 127
+</code></pre>
+<p>你的任务是编写以下函数，来实现 <code>sat</code> 程序的饱和加法。</p>
+<pre><code class="language-C">long signed_min(int bitwidth);
+long signed_max(int bitwidth);
+long sat_add(long operand1, long operand2, int bitwidth);
+</code></pre>
+<p>参数 <code>bitwidth</code> 是 4 到 64 之间的数字。以位宽 <code>bitwidth</code> 表示的二进制补码有符号整数将被限制在固定范围内。函数 <code>signed_min</code> 和 <code>signed_max</code> 返回该范围的最小值和最大值。函数 <code>sat_add</code> 实现饱和加法运算，如果结果在范围内，则返回其操作数的总和；如果结果溢出，则根据情况返回最小/最大值。虽然此处两个操作数的类型为 <code>long</code>，但你可以假设操作数的值始终位于位宽 <code>bitwidth</code> 表示的有符号整数的范围内。话虽如此，但这么处理也意味着以位宽 <code>bitwidth</code> 表示的值的位数，实际上可能多于所需的位数。所以，这些额外的位需要进行合适的处理，以确保该值在 <code>long</code> 范围内能够进行正确的计算。</p>
+<p>在编写 <code>sat.c</code> 的代码时，有三个重要的限制需要注意：</p>
+<ul>
+<li><strong>不可以使用关系运算符或 <code>math.h</code> 中的函数</strong>。禁止使用关系运算符意味着，你的代码不可以出现 <code>&lt; &gt; &lt;= &gt;=</code> 这些比较操作，但你可以使用 <code>!= ==</code> 进行相等性检查。你也不应该调用 <code>math.h</code> 库中的任何函数，例如 <code>pow</code>、<code>exp2</code> 等。这些限制旨在引导你使用纯粹的位操作来实现代码。对于其他运算符，例如算术运算符、逻辑运算符、按位运算符……这里不作限制。</li>
+<li><strong>参数 <code>bitwidth</code> 没有特殊情况</strong>。无论位宽 <code>bitwidth</code> 的值是 4、64 还是介于两者之间的任何值，你的函数都必须使用一个统一的代码来处理。不可以对某些位宽的值进行特殊处理，比如使用 <code>if switch ?:</code> 根据位宽的值将代码分为不同的情况。但是，这并不意味着不能使用条件逻辑，例如单独处理溢出或非溢出的情况。</li>
+<li><strong>不要使用循环或递归</strong>。此程序根本不需要循环或递归。</li>
+</ul>
+<p>违反以上任何一个限制的代码都是不合格的，因此，请仔细检查你的实现是否合规！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../topic_1/assign_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../topic_1/assign_1_pt2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../topic_1/assign_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../topic_1/assign_1_pt2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

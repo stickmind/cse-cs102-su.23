@@ -36,4 +36,4 @@ typedef FILE* stream;
 
 ## 练习
 
-下载群文件中的 `230915-cslib/cslib.zip` 文件，尝试使用 **CMake** 工具，将 `.h` 和 `.c` 组成的文件集合打包成静态库。
+下载群文件中的 `230918-cslib/cslib.zip` 文件，尝试使用 **CMake** 工具，将 `.h` 和 `.c` 组成的文件集合打包成静态库。

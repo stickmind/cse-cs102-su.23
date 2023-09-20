@@ -47,3 +47,66 @@ make: Nothing to be done for `all'.
 > 
 > - https://www.howtoforge.com/linux-man-command/
 > - http://cn.linux.vbird.org/linux_basic/0160startlinux_3.php
+
+## 测试
+
+课程服务器上提供了一个方便的测试工具 `sanitycheck`，并提供了一些默认的测试案例供你测试作业代码。该工具会比较你的结果和 `samples` 中示例程序的结果。你也可以在 `custom_tests` 文件中添加自己的测试案例。
+
+切换到作业文件夹目录中，执行 `sanitycheck` 并且不带任何参数，此操作将会执行默认的测试案例：
+
+```
+$ sanitycheck
+Will run default sanity check for assign0 in current directory ~/cs102/assign0.
+
++++ Test A-Make on ~/cs102/assign0
+Descr:   verify project builds cleanly
+Command: make clean && make triangle
+OK:  Clean build
+
++++ Test B-Triangle on ~/cs102/assign0
+Descr:   print a triangle, no command-line argument should default to 3 levels
+Command: ./triangle
+OK:  Submission output matches sample
+Matched output:
+       *
+      * *
+     *   *
+    * * * *
+   *       *
+...
+
+LOVE IT! This project passes all of the default sanity check cases.
+```
+
+参考 `custom_tests` 默认的测试格式，添加自己的测试案例，并通过如下命令执行自定义测试：
+
+```
+$ sanitycheck custom_tests
+Will run custom sanity check for assign0 in current directory ~/cs102/assign0.
+Reading custom test cases from file 'custom_tests'... found 1 test cases.
+
++++ Test BuildClean on ~/cs102/assign0
+Descr:   verify project builds cleanly
+Command: make
+OK:  Clean build
+
+Now running custom test cases against your program
+
++++ Test Custom-1 on ~/cs102/assign0
+Command: ./triangle -1
+MISMATCH:  Submission output does not match sample
+Sample output:  ./triangle: the number of levels must be between 0 and 8.
+Your output:
+       *
+      * *
+     *   *
+    * * * *
+   *       *
+  * *     * *
+ *   *   *   *
+* * * * * * * *
+
+This project passes 0 of the 1 custom test cases read from file 'custom_tests'.
+```
+
+在输出结果中，如果出现 `MISMATCH`，表明你的程序执行完成，但结果和示例不匹配。如果出现 `NOT OK`，表明你的程序没有成功地执行，或发生了致命错误，输出结果当然也和示例不匹配。

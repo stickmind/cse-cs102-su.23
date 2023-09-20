@@ -60,4 +60,4 @@ defaults:
     values:
       layout: "lab"
 
-livereload: false
+livereload: true

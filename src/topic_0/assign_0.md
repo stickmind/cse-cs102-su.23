@@ -1,4 +1,4 @@
-# 上手 Linux 和 C
+# 作业 0：使用 Linux 和 C
 
 > _本次作业参考：[CS107, Spring 2020 Assignment 0: Intro to Unix and C](https://web.stanford.edu/class/archive/cs/cs107/cs107.1206/assign0/)_
 
