@@ -16,5 +16,7 @@ links:
 
 **推荐阅读：**
 
-- [数学进制](/reader/topic_1/num_base.html){:target="_blank"}
+- [位和字节](/reader/topic_1/num_base.html){:target="_blank"}
 - [整数的表示](/reader/topic_1/int_rep.html){:target="_blank"}
+- [整型溢出](/reader/topic_1/overflow.html){:target="_blank"}
+- [整型转换](/reader/topic_1/conversion.html){:target="_blank"}

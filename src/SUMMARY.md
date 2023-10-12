@@ -43,6 +43,7 @@
   - [细胞自动机](topic_1/assign_1_pt2.md)
   - [UTF-8](topic_1/assign_1_pt3.md)
   - [测试与提交](topic_1/assign_1_pt4.md)
+  - [作业解读](topic_1/assign_1_hints.md)
 
 # 数组和指针 Array & Pointer
 
