@@ -16,9 +16,9 @@ permalink: /enroll/
 
 ## 试听课程
 
-试听课程包含前 4 个话题的录播剪辑。*试听版本仅提供录播内容，不提供任何答疑、服务器使用、实验、作业批改等服务。微信扫描二维码，支持 7 日内无条件退款。*
+[计算机组成与系统（试听版）](https://www.cctalk.com/m/group/90917111){:target="_blank"}包含完整课程的录播内容。
 
-![CS102：计算机组成与系统（试听版）](_images/demo.jpg){:style="max-width:300px;display:block;margin:auto"}
+*试听课程仅提供录播内容，不提供答疑、服务器、实验、作业等服务。*
 
 ## 收费标准
 

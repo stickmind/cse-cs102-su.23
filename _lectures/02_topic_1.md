@@ -2,7 +2,7 @@
 type: lecture
 date: 2023-10-9T7:30:00+00:00
 title: 话题 1. 数据的表示 Data Representation
-tldr: "本阶段带领大家熟悉 Linux 开发环境和 C 语言，以便更好地上手本课程"
+tldr: "本阶段介绍计算机的底层数据表示，了解位、字节等概念，并掌握位运算的强大应用"
 hide_from_announcments: false
 # thumbnail: /static_files/presentations/lec.jpg
 links:
@@ -18,5 +18,4 @@ links:
 
 - [位和字节](/reader/topic_1/num_base.html){:target="_blank"}
 - [整数的表示](/reader/topic_1/int_rep.html){:target="_blank"}
-- [整型溢出](/reader/topic_1/overflow.html){:target="_blank"}
-- [整型转换](/reader/topic_1/conversion.html){:target="_blank"}
+- [位运算](/reader/topic_1/bitwise.html){:target="_blank"}

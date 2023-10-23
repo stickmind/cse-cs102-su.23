@@ -2,6 +2,41 @@
 
 @import 'variables.css';
 
+.toc {
+    position: fixed;
+    right: 5px;
+    top: 60px;
+    z-index: 10;
+    background-color: whitesmoke;
+    max-width: 50%;
+}
+
+.toc button {
+    background-color: whitesmoke;
+    border: none;
+    color: brown;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin: auto auto;
+    cursor: pointer;
+}
+
+.toc .dir {
+    display: none;
+}
+
+.toc:hover .dir {
+    display: block;
+}
+
+#toc .li-2 {
+    margin-left: 15px;
+}
+
 :root {
     /* Browser default font-size is 16px, this way 1 rem = 10px */
     font-size: 68%;

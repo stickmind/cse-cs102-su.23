@@ -29,10 +29,10 @@
 - [整数的表示](topic_1/int_rep.md)
   - [无符号整型](topic_1/int_rep_pt1.md)
   - [有符号整型](topic_1/int_rep_pt2.md)
-- [整型溢出](topic_1/overflow.md)
-- [整型转换](topic_1/conversion.md)
+  - [整型溢出](topic_1/overflow.md)
+  - [整型转换](topic_1/conversion.md)
 - [位运算](topic_1/bitwise.md)
-- [位掩码](topic_1/bitmask.md)
+  - [应用：位掩码](topic_1/bitmask.md)
 - [实验 1：数据的表示](topic_1/lab_1.md)
   - [位运算](topic_1/lab_1_pt1.md)
   - [圆整](topic_1/lab_1_pt2.md)
@@ -47,7 +47,45 @@
 
 # 数组和指针 Array & Pointer
 
+
+- [字符串](topic_2/string.md)
+  - [字符串作为数组](topic_2/string_pt1.md)
+  - [string.h](topic_2/string_pt2.md)
+  - [字符串作为指针](topic_2/string_pt3.md)
+- [数组和指针](topic_2/array_and_pointer.md)
+  - [指针新解：理解 *p 的特殊性](topic_2/array_and_pointer_pt1.md)
+  - [数组索引和指针运算](topic_2/array_and_pointer_pt2.md)
+  - [多维数组和二级指针](topic_2/array_and_pointer_pt3.md)
+- [函数参数](topic_2/function_params.md)
+- [实验 2：数组和指针](topic_2/lab_2.md)
+  - [GDB 探究指针和数组](topic_2/lab_2_pt1.md)
+  - [探究 atoi](topic_2/lab_2_pt2.md)
+  - [使用 Valgrind](topic_2/lab_2_pt3.md)
+  - [探究 strtok](topic_2/lab_2_pt4.md)
+- [作业 2：C 字符串](topic_2/assign_2.md)
+  - [背景：文件系统和 Shell](topic_2/assign_2_pt1.md)
+  - [实现 get_env_value](topic_2/assign_2_pt2.md)
+  - [实现 scan_token](topic_2/assign_2_pt3.md)
+  - [实现 mywhich](topic_2/assign_2_pt4.md)
+  - [测试与提交](topic_2/assign_2_pt5.md)
+
 # 栈和堆 Stack & Heap
+
+- [内存布局](topic_3/memory_layout.md)
+- [栈分配](topic_3/stack_allocation.md)
+- [堆分配](topic_3/heap_allocation.md)
+- [结构体](topic_3/struct.md)
+- [实验 3：栈和堆](topic_3/lab_3.md)
+  - [堆内存的使用](topic_3/lab_3_pt1.md)
+  - [Valgrind 检测内存错误](topic_3/lab_3_pt2.md)
+  - [Valgrind 检测内存泄漏](topic_3/lab_3_pt3.md)
+  - [调试练习](topic_3/lab_3_pt4.md)
+- [作业 3：有趣的堆](topic_3/assign_3.md)
+  - [背景：过滤命令](topic_3/assign_3_pt1.md)
+  - [实现 read_line](topic_3/assign_3_pt2.md)
+  - [实现 mytail](topic_3/assign_3_pt3.md)
+  - [实现 myuniq](topic_3/assign_3_pt4.md)
+  - [测试与提交](topic_3/assign_3_pt5.md)
 
 # 泛型编程 Generic C
 

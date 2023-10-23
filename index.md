@@ -70,6 +70,8 @@ layout: home
 - [推荐 2：这门课激发了对 C 语言、汇编等程序语言底层运行机制的兴趣](https://www.zhihu.com/question/29224038/answer/2761968047){:target="_blank"}
 - [推荐 3：如果能把 CS106A/B，CS107 全部搞懂，你的编程能力就超过知乎上大部分程序员了](https://www.zhihu.com/question/66938108/answer/248914763){:target="_blank"}
 
-## 授课方式
+## 试听课程
 
-考虑到跨平台需求，目前暂定使用飞书会议或 QQ 群课堂，也可以看录播（永久有效）。
+[计算机组成与系统（试听版）](https://www.cctalk.com/m/group/90917111){:target="_blank"}包含完整课程的录播内容。
+
+*试听课程仅提供录播内容，不提供答疑、服务器、实验、作业等服务。*

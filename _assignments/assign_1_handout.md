@@ -8,7 +8,7 @@ hide_from_announcments: true
 points: 5
 due_event:
     type: due
-    date: 2023-10-27T23:59:00+00:00
+    date: 2023-10-22T23:59:00+00:00
     description: '作业 1 提交！'
 ---
 
