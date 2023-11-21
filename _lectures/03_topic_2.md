@@ -6,12 +6,12 @@ tldr: "本阶段介绍计算机如何表示更复杂的数据（字符串），�
 hide_from_announcments: false
 # thumbnail: /static_files/presentations/lec.jpg
 links:
-    # - url: https://www.bilibili.com/video/BV1Z94y1p7Wd/
-    #   name: 远程开发工作流
-    # - url: https://www.bilibili.com/video/BV1Wu411376H/
-    #   name: C 语言及 GCC 编译
-    # - url: https://www.bilibili.com/video/BV1py4y1F7UB/
-    #   name: 从 C++ 到 C 之抽象思维
+    - url: https://www.cctalk.com/v/16982469344793?xh_fshareuid=0
+      name: 以数组观点学习 string.h 接口
+    - url: https://www.cctalk.com/v/16986789841676?xh_fshareuid=0
+      name: 指针新解
+    - url: https://www.cctalk.com/v/17007209684911?xh_fshareuid=0
+      name: 使用 GDB 探究指针和数组
 ---
 
 **推荐阅读：**

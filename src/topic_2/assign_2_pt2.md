@@ -5,7 +5,7 @@
 函数 `get_env_value` 将环境变量数组和环境变量名作为参数，并返回环境变量数组中找到的变量名的值；如果在数组中找不到，则返回 `NULL`。
 
 ```c
-const char *get_env_value(const char *envp[], const char *varname);
+const char* get_env_value(const char* envp[], const char* varname);
 ```
 
 数组 `envp` 中的每个条目都是 `VARNAME=VALUE` 形式的字符串，你可以假设 `VARNAME` 和 `VALUE` 都不包含 `=`。注意，最后一个条目后面是 `NULL` 指针，用于标记该数组的结尾。你的函数应该迭代环境变量数组中的每个条目并查找匹配的项。

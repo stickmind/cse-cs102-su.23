@@ -69,9 +69,3 @@ layout: home
 - [推荐 1：斯坦福《编程范式》是 Linux 后端服务器和分布式系统开发的入门课](https://www.zhihu.com/question/51560126/answer/126503323){:target="_blank"}
 - [推荐 2：这门课激发了对 C 语言、汇编等程序语言底层运行机制的兴趣](https://www.zhihu.com/question/29224038/answer/2761968047){:target="_blank"}
 - [推荐 3：如果能把 CS106A/B，CS107 全部搞懂，你的编程能力就超过知乎上大部分程序员了](https://www.zhihu.com/question/66938108/answer/248914763){:target="_blank"}
-
-## 试听课程
-
-[计算机组成与系统（试听版）](https://www.cctalk.com/m/group/90917111){:target="_blank"}包含完整课程的录播内容。
-
-*试听课程仅提供录播内容，不提供答疑、服务器、实验、作业等服务。*

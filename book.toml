@@ -12,6 +12,7 @@ build-dir = "reader"
 [output.html]
 mathjax-support = true
 default-theme = "Rust"
+copy-fonts = false
 
 [output.html.search]
 limit-results = 20

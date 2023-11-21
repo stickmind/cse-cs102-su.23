@@ -72,9 +72,9 @@
 # 栈和堆 Stack & Heap
 
 - [内存布局](topic_3/memory_layout.md)
-- [栈分配](topic_3/stack_allocation.md)
-- [堆分配](topic_3/heap_allocation.md)
+- [内存管理](topic_3/memory_allocation.md)
 - [结构体](topic_3/struct.md)
+  - [设计栈 ADT](topic_3/stack_adt.md)
 - [实验 3：栈和堆](topic_3/lab_3.md)
   - [堆内存的使用](topic_3/lab_3_pt1.md)
   - [Valgrind 检测内存错误](topic_3/lab_3_pt2.md)
@@ -86,8 +86,24 @@
   - [实现 mytail](topic_3/assign_3_pt3.md)
   - [实现 myuniq](topic_3/assign_3_pt4.md)
   - [测试与提交](topic_3/assign_3_pt5.md)
-
+ 
 # 泛型编程 Generic C
+
+- [泛型指针](topic_4/void_pointer.md)
+- [函数指针](topic_4/function_pointer.md)
+- [实验 4：泛型和回调](topic_4/lab_4.md)
+  - [回调函数](topic_4/lab_4_pt1.md)
+  - [探究 gfind_max](topic_4/lab_4_pt2.md)
+  - [探究 bsearch_bug](topic_4/lab_4_pt3.md)
+  - [探究 memmove](topic_4/lab_4_pt4.md)
+  - [GDB 调试技巧](topic_4/lab_4_pt5.md)
+- [作业 4：深入泛型指针](topic_4/assign_4.md)
+  - [探究 scandir](topic_4/assign_4_pt1.md)
+  - [实现 myls](topic_4/assign_4_pt2.md)
+  - [探究 bsearch](topic_4/assign_4_pt3.md)
+  - [实现 binsert](topic_4/assign_4_pt4.md)
+  - [实现 mysort](topic_4/assign_4_pt5.md)
+  - [测试与提交](topic_4/assign_4_pt6.md)
 
 # 汇编语言 x86-64 Assembly
 

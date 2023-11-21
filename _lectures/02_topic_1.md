@@ -6,8 +6,8 @@ tldr: "本阶段介绍计算机的底层数据表示，了解位、字节等概�
 hide_from_announcments: false
 # thumbnail: /static_files/presentations/lec.jpg
 links:
-    # - url: https://www.bilibili.com/video/BV1Z94y1p7Wd/
-    #   name: 远程开发工作流
+    - url: https://www.cctalk.com/v/16971590102045?xh_fshareuid=0
+      name: 位运算及其应用
     # - url: https://www.bilibili.com/video/BV1Wu411376H/
     #   name: C 语言及 GCC 编译
     # - url: https://www.bilibili.com/video/BV1py4y1F7UB/
