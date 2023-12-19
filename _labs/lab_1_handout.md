@@ -3,7 +3,7 @@ type: lab
 date: 2023-10-14T7:30:00+00:00
 title: '实验 1. Data Representation'
 tldr: "本次实验精选了一些有趣的代码，巩固此阶段学习的位运算（bitwise）和整数的表示（integer representation）。另外，实验也会补充一些开发工具的使用和调试练习，目的是为了便于大家更好地完成作业。"
-pdf: /reader/topic_1/lab_1.html
+pdf: https://cs102doc.stickmind.com/topic_1/lab_1/index.html
 hide_from_announcments: true
 # attachment: /static_files/starter-proj.zip
 ---

@@ -11,9 +11,9 @@ items:
   name: 课程
   icon_class: fas fa-book-reader
 
-- url: /labs/
-  name: 实验
-  icon_class: fas fa-flask
+# - url: /labs/
+#   name: 实验
+#   icon_class: fas fa-flask
 
 # - url: /assignments/
 #   name: 作业

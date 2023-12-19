@@ -2,7 +2,7 @@
 type: lecture
 date: 2023-10-23T7:30:00+00:00
 title: 话题 2. 数组和指针 Arrays and Pointers
-tldr: "本阶段介绍计算机如何表示更复杂的数据（字符串），并学习数组和指针相关的内容"
+tldr: "本阶段将讨论计算机如何表示“文本”这种更复杂的数据类型"
 hide_from_announcments: false
 # thumbnail: /static_files/presentations/lec.jpg
 links:
@@ -16,6 +16,4 @@ links:
 
 **推荐阅读：**
 
-- [字符串](/reader/topic_2/string.html){:target="_blank"}
-- [数组和指针](/reader/topic_2/array_and_pointer.html){:target="_blank"}
-- [函数参数](/reader/topic_2/function_params.html){:target="_blank"}
+- [数组和指针](https://cs102doc.stickmind.com/topic_2.html){:target="_blank"}

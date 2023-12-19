@@ -3,7 +3,7 @@ type: assignment
 date: 2023-9-25T7:30:00+00:00
 title: '作业 0. Introduction to Linux and C'
 tldr: "本次作业目的是为了让大家熟悉 Linux 开发环境，并学会编辑、构建、运行、测试 C 程序。"
-pdf: 
+pdf: https://cs102doc.stickmind.com/topic_0/assign_0/index.html
 hide_from_announcments: true
 points: 5
 due_event:

@@ -1,4 +1,12 @@
-# 实验 4：泛型和回调
+---
+type: lab
+date: 2023-12-22T7:30:00+00:00
+title: '实验 4. void* and callbak'
+tldr: "本次实验带你了解原始内存的世界，了解 C 泛型编程的工具以及常见的问题。"
+pdf: https://cs102doc.stickmind.com/topic_4/lab_4/index.html
+hide_from_announcments: true
+# attachment: /static_files/starter-proj.zip
+---
 
 本次实验带你了解原始内存的世界。目标是让你能够写出并使用将函数作为参数的代码（包括一些神秘的语法），并了解如何尽可能地利用类型系统来编写代码，以及在没有类型系统的情况下该如何处理。你应该知道如何正确调用 `memcpy/memmove`，确切地知道在哪里需要类型转换以及为什么需要，并且对二级指针的正确使用提高警惕。
 

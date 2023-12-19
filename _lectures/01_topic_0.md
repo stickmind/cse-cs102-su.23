@@ -18,6 +18,4 @@ links:
 
 **推荐阅读：**
 
-- [Linux 介绍](/reader/topic_0/linux_intro.html){:target="_blank"}
-- [Linux 命令行](/reader/topic_0/linux_command.html){:target="_blank"}
-- [从 C++ 到 C](/reader/topic_0/from_cxx_to_c.html){:target="_blank"}
+- [开发环境](https://cs102doc.stickmind.com/topic_0.html){:target="_blank"}

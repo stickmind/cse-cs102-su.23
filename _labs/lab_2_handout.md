@@ -3,7 +3,7 @@ type: lab
 date: 2023-10-24T7:30:00+00:00
 title: '实验 2. Array and Pointer'
 tldr: "本次实验进一步练习使用 gdb 和 valgrind、学习 string.h 接口、以及将 C 字符串作为原始数组/指针进行操作。"
-pdf: /reader/topic_2/lab_2.html
+pdf: https://cs102doc.stickmind.com/topic_2/lab_2/index.html
 hide_from_announcments: true
 # attachment: /static_files/starter-proj.zip
 ---
